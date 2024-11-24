@@ -18,5 +18,6 @@ export interface Achievement {
     technologies?: string[];
     achievements?: Achievement[];
     forcePageBreak?: boolean;
+    plainForcePageBreak?: boolean;
     bumpdown?: number;
   }

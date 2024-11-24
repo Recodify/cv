@@ -1,0 +1,74 @@
+:root {
+  --primary: #475569; /* slate-600 */
+  --secondary: #e5e7eb; /* grey-300 */
+  --tertiary: #9ca3af; /* slate-500 */
+  --accent: #facc15; /* yellow-400 */
+  --highlight: #ffffff; /* white */
+  --title-decoration: underline;
+}
+
+.connection-list {
+  @apply space-y-3;
+}
+
+.me {
+  @apply text-4xl font-bold text-highlight;
+}
+
+@media print {
+  /* Add color control for the default theme */
+  :root {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    forced-color-adjust: none;
+  }
+
+  .theme-plain {
+    --primary: #000000;
+    --secondary: #000000;
+    --accent: #000000;
+    --title-decoration: none;
+    --highlight: #000000;
+    /* Add color control for plain theme */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    forced-color-adjust: none;
+  }
+
+  .theme-plain .me {
+    @apply text-3xl font-bold text-highlight;
+  }
+
+  .theme-plain .icon {
+    display: none;
+  }
+  .theme-plain .connection-type {
+    display: block;
+  }
+  .theme-plain .profile-section {
+    padding: 0;
+    margin: 0;
+  }
+
+  .theme-plain .connection-list {
+    @apply space-y-0;
+  }
+
+  .theme-plain .aboutme-section {
+    padding: 0;
+    margin: 0;
+  }
+
+  .theme-plain .section-header {
+    text-decoration: var(--title-decoration);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .theme-plain [class*="text-"],
+  .theme-plain [class*="bg-"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    forced-color-adjust: none !important;
+  }
+}

@@ -8,7 +8,7 @@ interface ConnectionListProps {
 }
 
 export default function ConnectionList({ items, className = "" }: Readonly<ConnectionListProps>) {
-  return <div className={`space-y-3 ${className}`}>
+  return <div className={`connection-list ${className}`}>
     {items.map((item) => (
       <ConnectionItem key={item.type} {...item} />
     ))}

@@ -1,89 +1,85 @@
-import { SKILL_GROUPS } from '../skill/Skills';
-import { EXPERIENCE_ROLES } from '../experience/Experience';
-import { PREVIOUS_EXPERIENCE_ROLES } from '../experience/PreviousExperience';
+import { skills } from '../../data/skills';
+import { recentRoles, previousRoles } from '../../data/roles';
 import AboutMe from '../aboutme/AboutMe';
+import Profile from '../profile/Profile';
 
 export default function PlainTextCV() {
-  return (
-    <div className="max-w-4xl mx-auto p-8 space-y-8">
-      {/* Header */}
-      <header className="space-y-4">
-        <h1 className="text-2xl font-bold">Sam Shiles</h1>
-        <p>CTO // ARCHITECT // DEVELOPER // EXITED FOUNDER</p>
-
-        <div className="space-y-1">
-          <p>Phone: +44 (0)7551545656</p>
-          <p>Email: shilessam@gmail.com</p>
-          <p>Location: Bristol, UK</p>
-          <p>LinkedIn: mylinkd.in/sam-shiles</p>
-          <p>GitHub: github.com/recodify</p>
-          <p>Stack Overflow: stk.so/recodify</p>
-        </div>
-      </header>
-
-      {/* About Me */}
-      <section>
-        <AboutMe />
-      </section>
-
-      {/* Skills Sections */}
-      {SKILL_GROUPS.map((group) => (
-        <section key={group.category}>
-          <h2 className="text-xl font-bold mb-4">{group.title}</h2>
-          {group.subGroups ? (
+    return (
+        <div className="w-full max-w-4xl mx-auto bg-white p-8 space-y-8 theme-plain">
+            {/* Header */}
             <div className="space-y-4">
-              {group.subGroups.map((subGroup) => (
-                <div key={subGroup.title}>
-                  <h3 className="font-bold mb-2">{subGroup.title}</h3>
-                  <p>{subGroup.skills.map(skill => skill.name).join(', ')}</p>
+                <Profile />
+            </div>
+
+            {/* About Me */}
+            <section className="space-y-4">
+                <AboutMe />
+            </section>
+
+
+            {/* Experience */}
+            <section className="space-y-4">
+                <h2 className="text-2xl font-bold">EXPERIENCE</h2>
+                <div className="space-y-6">
+                    {recentRoles.map(role => (
+
+                        <div key={role.id} className={`space-y-2 ${role.plainForcePageBreak ? 'print:breakbefore' : ''}`}>
+                            <div>
+                                <h3 className="font-semibold">{role.title} | {role.company}</h3>
+                                <p className="text-sm">{role.period.start} - {role.period.end}</p>
+                            </div>
+                            {role.technologies && (
+                                <p className="text-sm">Technologies: {role.technologies.join(', ')}</p>
+                            )}
+                            {role.introduction && (
+                                <p>{role.introduction}</p>
+                            )}
+                            {role.achievements && (
+                                <ul className="list-disc ml-4 space-y-1">
+                                    {role.achievements.filter(a => !a.hidden).map(achievement => (
+                                        <li key={achievement.id}>{achievement.text.replace(/\{\{|\}\}/g, '')}</li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+                    ))}
                 </div>
-              ))}
-            </div>
-          ) : (
-            <p>{group.skills?.map(skill => skill.name).join(', ')}</p>
-          )}
-        </section>
-      ))}
+            </section>
 
-      {/* Experience */}
-      <section>
-        <h2 className="text-xl font-bold mb-4">Experience</h2>
-        <div className="space-y-6">
-          {EXPERIENCE_ROLES.map((role) => (
-            <div key={role.id} className="space-y-2">
-              <div>
-                <h3 className="font-bold">{role.title} | {role.company}</h3>
-                <p>{role.period.start} - {role.period.end}</p>
-              </div>
-              {role.introduction && <p>{role.introduction}</p>}
-              {role.technologies && <p>Technologies: {role.technologies.join(', ')}</p>}
-              {role.achievements && (
-                <ul className="list-disc ml-4">
-                  {role.achievements.filter(a => !a.hidden).map((achievement) => (
-                    <li key={achievement.id}>
-                      {achievement.text.replace(/\{\{|\}\}/g, '')}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
+            {/* Skills Sections */}
+            <div className="text-2xl font-bold print:breakbefore">SPECIALISATIONS</div>
+            {skills.map(group => (
+                <section key={group.category} className="space-y-4">
+                    <h2 className="text-xl font-bold">{group.title.toUpperCase()}</h2>
+                    {group.subGroups ? (
+                        // For technology section with subgroups
+                        <div className="space-y-4">
+                            {group.subGroups.map(subGroup => (
+                                <div key={subGroup.title} className="space-y-2">
+                                    <h3 className="font-semibold">{subGroup.title}</h3>
+                                    <p>{subGroup.skills.map(skill => skill.name).join(', ')}</p>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        // For other sections without subgroups
+                        <p>{group.skills?.map(skill => skill.name).join(', ')}</p>
+                    )}
+                </section>
+            ))}
 
-      {/* Previous Experience */}
-      <section>
-        <h2 className="text-xl font-bold mb-4">Previous Experience</h2>
-        <div className="space-y-2">
-          {PREVIOUS_EXPERIENCE_ROLES.map((role) => (
-            <div key={role.id}>
-              <p>
-                <span className="font-bold">{role.title}</span> | {role.company} | {role.period.start} - {role.period.end}
-              </p>
-            </div>
-          ))}
+            {/* Previous Experience */}
+            <section className="print:breakbefore">
+                <h2 className="text-2xl font-bold">PREVIOUS EXPERIENCE</h2>
+                <div className="space-y-4">
+                    {previousRoles.map(role => (
+                        <div key={role.id}>
+                            <h3 className="font-semibold">{role.title} | {role.company}</h3>
+                            <p className="text-sm">{role.period.start} - {role.period.end}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-  );
+    );
 }
