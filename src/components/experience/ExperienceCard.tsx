@@ -30,7 +30,7 @@ export default function ExperienceCard({ role }: Readonly<{ role: ExperienceRole
                             <span className="text-lg text-yellow-600 hover:text-yellow-500">{role.company}</span>
                         </a>
                     </div>
-                    <div className="text-slate-600 text-sm md:text-base print:text-base font-medium">{role.period.start} - {role.period.end}</div>
+                    <div className="text-slate-600  md:text-base print:text-base">{role.period.start} - {role.period.end}</div>
                 </div>
             </div>
 

@@ -10,19 +10,19 @@ export function PreviousExperienceCard({ role }: Readonly<{ role: ExperienceRole
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 hover:text-yellow-600">
-                            <h3 className="font-semibold text-slate-800 text-lg">{role.title}</h3>
+                            <h3 className=" text-slate-800 text-lg">{role.title}</h3>
                             <span>|</span>
                             <span className="text-yellow-600">{role.company}</span>
                         </a>
                     ) : (
                         <div className="inline-flex items-center gap-2">
-                            <h3 className="font-semibold text-slate-800 text-lg">{role.title}</h3>
+                            <h3 className=" text-slate-800 text-lg">{role.title}</h3>
                             <span>|</span>
                             <span className="text-yellow-600 hover:text-yellow-500">{role.company}</span>
                         </div>
                     )}
                 </div>
-                <div className="text-slate-600 text-sm md:text-base print:text-base font-medium">
+                <div className="text-slate-600 text-sm md:text-base print:text-base ">
                     {role.period.start} - {role.period.end}
                 </div>
             </div>
