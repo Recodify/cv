@@ -145,7 +145,7 @@ export const skills: SkillGroup[] = [
     forcePageBreak: true,
     skills: [
       { name: 'Building Teams', icon: <UserRoundPlus /> },
-      { name: 'Agile / Scrum / Lean', icon: <Users /> },
+      { name: 'Agile / Scrum', icon: <Users /> },
       { name: 'Remote Teams', icon: <ContactRound /> },
       { name: 'Mentoring', icon: <GraduationCap /> },
       { name: 'Process Design', icon: <GitBranch /> },
