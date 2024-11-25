@@ -40,7 +40,7 @@ export default function PrintDialog({ show, setShow, onPrint }: Readonly<{ show:
                 <div className="flex items-center gap-2">
                     {browserType && !showVersionSelect && <BrowserIcon browser={browserType} className="w-6 h-6" />}
                     <h3 className="font-semibold text-gray-900">
-                        {showVersionSelect ? 'Select Version' : `Saving a PDF in ${browserType.charAt(0).toUpperCase() + browserType.slice(1)}`}
+                        {showVersionSelect ? 'Download as' : `To download a PDF in ${browserType.charAt(0).toUpperCase() + browserType.slice(1)}`}
                     </h3>
                 </div>
                 <button onClick={() => setShow(false)} className="text-gray-500 hover:text-accent text-xl font-bold">

@@ -26,7 +26,7 @@ function App() {
             </aside>
 
             {/* Main Content */}
-            <main className="flex-1 bg-white px-6 pb-5 sm:p-6 md:pl-8 md:pr-8 print:pt-0">
+            <main className="flex-1 bg-white px-5 pb-5 sm:p-6 md:pl-8 md:pr-8 print:pt-0">
               <div className="print:break-before-auto">
                 <AboutMe />
                 <Experience />

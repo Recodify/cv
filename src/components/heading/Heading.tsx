@@ -7,7 +7,7 @@ export default function Heading({ title }: Readonly<{ title: string }>) {
             sm:text-2xl
             mt-8
             sm:mt-8
-            md:mt-10
+            md:mt-6
             mb-6
             sm:mb-8
             md:mb-10
