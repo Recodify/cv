@@ -6,7 +6,7 @@ export const recentRoles: ExperienceRole[] = [
       title: "Consultant",
       company: "Maya Tyres",
       website: "trustmaya.com",
-      introduction: "Consultancy engagement to advise a an early stage startup.",
+      introduction: "Consultancy engagement to advise an early stage startup.",
       period: {
         start: "May 2024",
         end: "Jun 2024"
@@ -19,11 +19,11 @@ export const recentRoles: ExperienceRole[] = [
       ],
       achievements: [
         {
-          id: 'speakeasy-1',
+          id: 'maya-1',
           text: "{{Conducted AWS cost optimisation}}, securing significant savings and previously denied AWS Activate credits."
         },
         {
-          id: 'speakeasy-2',
+          id: 'maya-2',
           text: "{{Reviewed and advised on MVP architecture}}, AWS strategy & technologies and alignment of data model with the product vision."
         }
       ]
@@ -34,7 +34,7 @@ export const recentRoles: ExperienceRole[] = [
       title: "Developer",
       company: "Speakeasy",
       website: "speakeasyapi.dev",
-      introduction: "Consultancy engagement to advise a an early stage startup.",
+      introduction: "Short-term engagement to develop a Clickhouse proof-of-concept.",
       period: {
         start: "Dec 2023",
         end: "Feb 2024"
@@ -48,11 +48,11 @@ export const recentRoles: ExperienceRole[] = [
       ],
       achievements: [
         {
-          id: 'maya-1',
+          id: 'speakeasy-1',
           text: "{{Developed a proof-of-concept architecture}} for handling high-volume time-series data, improving page load times and storage efficiency."
         },
         {
-          id: 'maya-2',
+          id: 'speakeasy-2',
           text: "{{Delivered real-time data exploration tools}} using React and Highcharts."
         }
       ]
@@ -81,7 +81,7 @@ export const recentRoles: ExperienceRole[] = [
       achievements: [
         {
           id: 'homelink-0',
-          text: "{{Core contributor}} in scaling the business from pre-revenue to a multi-million-pound acquisition."
+          text: "{{Core contributor}} in scaling the business from pre-revenue through product-market fit to multi-£M acquisition."
         },
         {
           id: 'homelink-1',
@@ -101,7 +101,7 @@ export const recentRoles: ExperienceRole[] = [
         },
         {
           id: 'homelink-5',
-          text: "{{Mentored and expanded the engineering team}} to 11 developers while remaining predominantly hands-on."
+          text: "{{Mentored and expanded the engineering team}} to 11 developers while, remaining predominantly hands-on."
         }
       ]
     },
