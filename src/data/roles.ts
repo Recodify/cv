@@ -177,7 +177,7 @@ export const recentRoles: ExperienceRole[] = [
       title: "Tech Lead, Architect",
       company: "Collinson",
       website: "www.collinsongroup.com",
-      introduction: "Initially tech lead, latterly hands-on Solution Architect, building a multi-sector loyalty platform handling over 25M+ daily transactions.",
+      introduction: "Initially served as Tech Lead and later as a hands-on Solution Architect, building a multi-sector loyalty and marketing platform.",
       printBreak: {
         styled: false,
         plain: true
