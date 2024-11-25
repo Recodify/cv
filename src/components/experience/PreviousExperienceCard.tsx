@@ -19,7 +19,7 @@ export function PreviousExperienceCard({ role }: Readonly<{ role: ExperienceRole
                         <div className="flex items-center gap-2">
                             <h3 className="font-semibold text-slate-800 text-lg ">{role.title}</h3>
                             <span>|</span>
-                            <span className="text-yellow-600">{role.company}</span>
+                            <span className="text-yellow-600 hover:text-yellow-500">{role.company}</span>
                         </div>
                     )}
                 </div>
