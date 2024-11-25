@@ -11,16 +11,17 @@ function formatAchievementText(text: string) {
     });
 }
 
-export function ExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
+export default function ExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
     const containerClasses = [
-        role.forcePageBreak && 'print:breakbefore',
+        'print:break-inside-avoid',
+        role.printBreak?.styled && 'print:break-margin',
         role.bumpdown && `print:mt-${role.bumpdown}`
     ].filter(Boolean).join(' ');
 
     return (
-        <div className={containerClasses}>
+        <article className={containerClasses}>
             <div className="space-y-2">
-                <div className="flex flex-col md:flex-row md:items-center gap-1">
+                <div className="flex flex-col md:flex-row print:flex-row md:items-center print:items-center gap-1">
                     <div className="flex-1">
                         <a href={`https://${role.website}`} target="_blank" rel="noopener noreferrer"
                          className="inline-flex items-center gap-2 hover:text-yellow-500">
@@ -29,7 +30,7 @@ export function ExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
                             <span className="text-lg text-yellow-600 hover:text-yellow-500">{role.company}</span>
                         </a>
                     </div>
-                    <div className="text-slate-600 text-sm md:text-base font-medium">{role.period.start} - {role.period.end}</div>
+                    <div className="text-slate-600 text-sm md:text-base print:text-base font-medium">{role.period.start} - {role.period.end}</div>
                 </div>
             </div>
 
@@ -49,6 +50,6 @@ export function ExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
                 </ul>
                 <hr />
             </div>
-        </div>
+        </article>
     );
 }

@@ -13,6 +13,9 @@ module.exports = {
         accent: 'var(--accent)',
         titleDecoration: 'var(--title-decoration)',
         highlight: 'var(--highlight)',
+      },
+      width: {
+        '76': '19rem',
       }
     },
   },

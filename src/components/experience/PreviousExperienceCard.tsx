@@ -2,8 +2,8 @@ import type { ExperienceRole } from '@/types/experience';
 
 export function PreviousExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
     return (
-        <div className="space-y-4">
-            <div className="flex flex-col md:flex-row md:items-center gap-1">
+        <div className="space-y-4 print:break-inside-avoid">
+            <div className="flex flex-col md:flex-row print:flex-row md:items-center print:items-center gap-1">
                 <div className="flex-1">
                     {role.website ? (
                         <a href={`https://${role.website}`}
@@ -22,7 +22,9 @@ export function PreviousExperienceCard({ role }: Readonly<{ role: ExperienceRole
                         </div>
                     )}
                 </div>
-                <div className="text-slate-600 text-sm md:text-base font-medium">{role.period.start} - {role.period.end}</div>
+                <div className="text-slate-600 text-sm md:text-base print:text-base font-medium">
+                    {role.period.start} - {role.period.end}
+                </div>
             </div>
         </div>
     );

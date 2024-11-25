@@ -23,16 +23,16 @@ export const connection: Connection[] = [
       text: "Bristol, UK"
     },
     {
-      type: 'linkedin',
-      icon: <FaLinkedinIn className="w-full h-full" />,
-      text: "mylinkd.in/sam-shiles",
-      href: "https://mylinkd.in/sam-shiles"
-    },
-    {
       type: 'stackoverflow',
       icon: <FaStackOverflow className="w-full h-full" />,
       text: "stk.so/recodify",
       href: "https://stk.so/recodify"
+    },
+    {
+      type: 'linkedin',
+      icon: <FaLinkedinIn className="w-full h-full" />,
+      text: "mylinkd.in/sam-shiles",
+      href: "https://mylinkd.in/sam-shiles"
     },
     {
       type: 'github',

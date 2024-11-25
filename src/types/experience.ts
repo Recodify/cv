@@ -17,7 +17,9 @@ export interface Achievement {
     introduction?: string;
     technologies?: string[];
     achievements?: Achievement[];
-    forcePageBreak?: boolean;
-    plainForcePageBreak?: boolean;
     bumpdown?: number;
+    printBreak?: {
+        styled?: boolean;
+        plain?: boolean;
+    };
   }

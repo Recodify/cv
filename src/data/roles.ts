@@ -52,12 +52,14 @@ export const recentRoles: ExperienceRole[] = [
     },
     {
       id: 'homelink-2008',
-      forcePageBreak: true,
-      plainForcePageBreak: true,
       title: "Founder/CTO/Dev",
       company: "HomeLink",
       website: "homelink.co",
       introduction: "Hands-on founder, CTO and Principal Developer of an IoT startup/scale-up Led the company from bootstrap to exit.",
+      printBreak: {
+        styled: true,
+        plain: true
+      },
       period: {
         start: "Nov 2008",
         end: "Sep 2023"
@@ -97,7 +99,6 @@ export const recentRoles: ExperienceRole[] = [
     {
       id: 'civica-2017',
       title: "Senior Developer",
-      plainForcePageBreak: false,
       company: "Civica",
       website: "civica.com",
       introduction: "Senior Developer for a large public sector financial management system, delivered as part of a AUD200M (£124M) contract.",
@@ -127,11 +128,14 @@ export const recentRoles: ExperienceRole[] = [
     {
       id: 'inty-2016',
       title: "Senior Developer",
-      forcePageBreak: false,
       bumpdown: 5,
       company: "intY",
       website: "inty.com",
       introduction: "",
+      printBreak: {
+        styled: true,
+        plain: true
+      },
       period: {
         start: "Feb 2016",
         end: "Sep 2017"
@@ -160,6 +164,10 @@ export const recentRoles: ExperienceRole[] = [
       company: "Collinson",
       website: "www.collinsongroup.com",
       introduction: "",
+      printBreak: {
+        styled: false,
+        plain: true
+      },
       period: {
         start: "Aug 2013",
         end: "Feb 2016"

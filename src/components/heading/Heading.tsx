@@ -5,7 +5,7 @@ export default function Heading({ title }: Readonly<{ title: string }>) {
             font-semibold
             text-xl
             sm:text-2xl
-            mt-6
+            mt-8
             sm:mt-8
             md:mt-10
             mb-6
