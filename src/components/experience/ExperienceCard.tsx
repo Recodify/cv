@@ -26,7 +26,7 @@ export function ExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
                          className="flex items-center gap-2 hover:text-yellow-500">
                             <h3 className="font-semibold text-lg">{role.title}</h3>
                             <span>|</span>
-                            <span className="text-lg">{role.company}</span>
+                            <span className="text-lg text-yellow-600">{role.company}</span>
                         </a>
                     </div>
                     <div className="text-primary mr-2">{role.period.start} - {role.period.end}</div>
