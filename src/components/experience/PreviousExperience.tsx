@@ -5,7 +5,7 @@ import { previousRoles } from '../../data/roles';
 
 export default function PreviousExperience() {
   return (
-    <div className="print:break-inside-avoid print:break-margin">
+    <div className="print:break-inside-avoid print:break-margin previous-experience">
       <Heading title="PREVIOUS EXPERIENCE" />
       <div className="space-y-2">
         {previousRoles.map(role => (

@@ -3,7 +3,7 @@ import { connection as connections } from '../../data/connections';
 
 export default function Profile() {
   return (
-    <div className="space-y-4 profile-section px-2 md:px-0">
+    <div className="space-y-6 profile-section px-2 md:px-0">
       <div className="text-center md:text-left print:text-left">
         <h1 className="me font-bold text-highlight text-3xl md:text-4xl">Sam Shiles</h1>
         <h2 className="text-lg md:text-xl text-accent mt-2">

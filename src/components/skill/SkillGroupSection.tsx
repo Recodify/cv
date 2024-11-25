@@ -60,7 +60,7 @@ export default function SkillGroupSection({ title, skills, subGroups, forcePageB
           {headerContent}
         </button>
         <div className={`pb-4 ${!isExpanded ? 'hidden md:block print:block' : ''}`}>
-          <div className="grid grid-cols-2 gap-y-2 sm:gap-y-3 gap-x-4 px-8 md:px-6 print:pl-5">
+          <div className="grid grid-cols-2 gap-y-2 sm:gap-y-3 gap-x-4 px-8 md:px-4 print:pl-4">
             {skills?.map((skill) => (
               <SkillItem key={skill.name} {...skill} />
             ))}

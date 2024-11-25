@@ -62,13 +62,10 @@ export default function PlainTextCV() {
                     {group.subGroups ? (
                         <div className="space-y-2">
                             {group.subGroups.map(subGroup => (
-                                <>
-                                    {subGroup.forcePageBreak && <div className="print:break-inside-avoid print:break-margin" />}
-                                    <div key={subGroup.title} className="space-y-2">
-                                        <h3 className="font-semibold">{toTitleCase(subGroup.title)}</h3>
-                                        <p>{subGroup.skills.map(skill => skill.name).join(', ')}</p>
-                                    </div>
-                                </>
+                                <div key={subGroup.title} className="space-y-2">
+                                    <h3 className="font-semibold">{toTitleCase(subGroup.title)}</h3>
+                                    <p>{subGroup.skills.map(skill => skill.name).join(', ')}</p>
+                                </div>
                             ))}
                         </div>
                     ) : (

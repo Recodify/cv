@@ -144,9 +144,21 @@ code {
   }
 
   /* Updated margin for page breaks with more specific selector and print units */
-  article.print\:break-margin,
-  .print\:break-margin {
-    padding-top: 1.5rem !important;
+  body.print-version-plain article.print\:break-margin {
+    padding-top: 1rem !important;
+    display: block !important; /* Ensure block formatting context */
+    position: relative !important; /* Create new stacking context */
+  }
+
+  body.print-version-styled article.print\:break-margin {
+    padding-top: 1rem !important;
+    display: block !important; /* Ensure block formatting context */
+    position: relative !important; /* Create new stacking context */
+  }
+
+
+  body.print-version-styled .previous-experience.print\:break-margin {
+    padding-top: 1mm !important;
     display: block !important; /* Ensure block formatting context */
     position: relative !important; /* Create new stacking context */
   }
