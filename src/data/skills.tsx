@@ -142,6 +142,7 @@ export const skills: SkillGroup[] = [
   {
     category: 'team',
     title: 'Team',
+    forcePageBreak: true,
     skills: [
       { name: 'Building Teams', icon: <UserRoundPlus /> },
       { name: 'Mentoring', icon: <GraduationCap /> },

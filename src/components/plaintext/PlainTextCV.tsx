@@ -3,6 +3,10 @@ import { recentRoles, previousRoles } from '../../data/roles';
 import AboutMe from '../aboutme/AboutMe';
 import Profile from '../profile/Profile';
 
+function toTitleCase(str: string) {
+    return str.replace(/\b\w/g, char => char.toUpperCase());
+}
+
 export default function PlainTextCV() {
     return (
         <div className="w-full max-w-4xl mx-auto bg-white p-8 space-y-8 theme-plain">
@@ -18,7 +22,7 @@ export default function PlainTextCV() {
 
             {/* Experience */}
             <section className="space-y-6">
-                <h2 className="text-xl font-bold">Experience</h2>
+                <h2 className="text-xl font-bold underline">Experience</h2>
                 {recentRoles.map(role => (
                     <article
                         key={role.id}
@@ -52,17 +56,19 @@ export default function PlainTextCV() {
             </section>
 
             {/* Skills Sections */}
-            <div className="text-xl font-bold">Skills & Specialisations</div>
             {skills.map(group => (
                 <section key={group.category} className="space-y-2">
-                    <h2 className="text-lg font-bold">{group.title.toUpperCase()}</h2>
+                    <h2 className="text-lg font-bold underline">{toTitleCase(group.title)}</h2>
                     {group.subGroups ? (
                         <div className="space-y-2">
                             {group.subGroups.map(subGroup => (
-                                <div key={subGroup.title} className="space-y-2">
-                                    <h3 className="font-semibold">{subGroup.title}</h3>
-                                    <p>{subGroup.skills.map(skill => skill.name).join(', ')}</p>
-                                </div>
+                                <>
+                                    {subGroup.forcePageBreak && <div className="print:break-inside-avoid print:break-margin" />}
+                                    <div key={subGroup.title} className="space-y-2">
+                                        <h3 className="font-semibold">{toTitleCase(subGroup.title)}</h3>
+                                        <p>{subGroup.skills.map(skill => skill.name).join(', ')}</p>
+                                    </div>
+                                </>
                             ))}
                         </div>
                     ) : (
@@ -73,7 +79,7 @@ export default function PlainTextCV() {
 
             {/* Previous Experience */}
             <section>
-                <h2 className="text-xl font-bold py-4">Previous Experience</h2>
+                <h2 className="text-xl font-bold py-4 underline">Previous Experience</h2>
                 <div className="space-y-2">
                     {previousRoles.map(role => (
                         <div key={role.id}>

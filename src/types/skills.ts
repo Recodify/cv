@@ -7,6 +7,7 @@ export interface Skill {
 
 export interface SkillSubGroup {
   title: string;
+  forcePageBreak?: boolean;
   skills: Skill[];
 }
 

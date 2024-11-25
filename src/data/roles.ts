@@ -12,16 +12,19 @@ export const recentRoles: ExperienceRole[] = [
         end: "Jun 2024"
       },
       technologies: [
-        "Go", "Clickhouse", "Terraform", "Docker", "React", "Redpanda"
+        "Typescript",
+        "Next.js", "React",
+        "Aurora",
+        "AWS"
       ],
       achievements: [
         {
-          id: 'maya-1',
-          text: "{{Developed a proof-of-concept architecture}} for handling high-volume time-series data, improving page load times and storage efficiency."
+          id: 'speakeasy-1',
+          text: "{{Conducted AWS cost optimisation}}, securing significant savings and previously denied AWS Activate credits."
         },
         {
-          id: 'maya-2',
-          text: "{{Delivered real-time data exploration tools}} using React and Highcharts."
+          id: 'speakeasy-2',
+          text: "{{Reviewed and advised on MVP architecture}}, AWS strategy & technologies and alignment of data model with the product vision."
         }
       ]
     },
@@ -37,16 +40,20 @@ export const recentRoles: ExperienceRole[] = [
         end: "Feb 2024"
       },
       technologies: [
-        "AWS", "Next.js", "React", "Aurora"
+        "Typescript", "Go",
+        "React",
+        "PostgreSQL", "Clickhouse",
+        "Redpanda",
+        "Docker", "GCP", "Terraform"
       ],
       achievements: [
         {
-          id: 'speakeasy-1',
-          text: "{{Conducted AWS cost optimisation}}, securing significant savings and previously denied AWS Activate credits."
+          id: 'maya-1',
+          text: "{{Developed a proof-of-concept architecture}} for handling high-volume time-series data, improving page load times and storage efficiency."
         },
         {
-          id: 'speakeasy-2',
-          text: "{{Reviewed and advised on MVP architecture}}, AWS strategy & technologies and alignment of data model with the product vision."
+          id: 'maya-2',
+          text: "{{Delivered real-time data exploration tools}} using React and Highcharts."
         }
       ]
     },
@@ -55,7 +62,7 @@ export const recentRoles: ExperienceRole[] = [
       title: "Founder/CTO/Dev",
       company: "HomeLink",
       website: "homelink.co",
-      introduction: "Hands-on founder, CTO and Principal Developer of an IoT startup/scale-up Led the company from bootstrap to exit.",
+      introduction: "Hands-on founder, CTO and Principal Developer of an IoT startup/scale-up. Led the company from bootstrap to exit.",
       printBreak: {
         styled: true,
         plain: true
@@ -65,9 +72,11 @@ export const recentRoles: ExperienceRole[] = [
         end: "Sep 2023"
       },
       technologies: [
-        "TypeScript", "Node.js", "Python", "C#", ".NET Core", "AWS",
-        "Serverless", "IoT", "Elasticsearch", "MySQL", "Clickhouse",
-        "Docker", "RabbitMQ", "Angular", "Highcharts"
+        "TypeScript", "Node.js", "Python", "C#",
+        "Angular", "Highcharts",
+        "MySQL", "Elasticsearch", "Clickhouse",
+        "RabbitMQ",
+        "AWS", "Docker", "Serverless", "IoT"
       ],
       achievements: [
         {
@@ -107,7 +116,9 @@ export const recentRoles: ExperienceRole[] = [
         end: "Nov 2018"
       },
       technologies: [
-        "C#", ".NET Core", "Azure DevOps", "SQL Server"
+        "C#", ".NET Core",
+        "SQL Server",
+        "Azure DevOps"
       ],
       achievements: [
         {
@@ -131,7 +142,7 @@ export const recentRoles: ExperienceRole[] = [
       bumpdown: 5,
       company: "intY",
       website: "inty.com",
-      introduction: "",
+      introduction: "Senior developer for repeat contract, contributed to the evolution of a SaaS cloud software provisioning platform.",
       printBreak: {
         styled: true,
         plain: true
@@ -141,7 +152,10 @@ export const recentRoles: ExperienceRole[] = [
         end: "Sep 2017"
       },
       technologies: [
-        "C#", ".NET", "ASP.NET", "TypeScript", "Azure", "PowerBI", "React"
+        "C#", ".NET", "TypeScript",
+        "React", "ASP.NET", "PowerBI",
+        "SQL Server",
+        "Azure"
       ],
       achievements: [
         {
@@ -163,7 +177,7 @@ export const recentRoles: ExperienceRole[] = [
       title: "Tech Lead, Architect",
       company: "Collinson",
       website: "www.collinsongroup.com",
-      introduction: "",
+      introduction: "Initially tech lead, latterly hands-on Solution Architect, building a multi-sector loyalty platform handling over 25M+ daily transactions.",
       printBreak: {
         styled: false,
         plain: true
@@ -173,8 +187,11 @@ export const recentRoles: ExperienceRole[] = [
         end: "Feb 2016"
       },
       technologies: [
-        "C#", ".NET", "ASP.NET", "SQL Server", "RabbitMQ", "Redis",
-        "CouchDB", "Node.js", "Azure", "Docker", "ElasticSearch"
+        "C#", ".NET", "Node.js",
+        "ASP.NET",
+        "SQL Server", "CouchDB", "ElasticSearch",
+        "RabbitMQ", "Redis",
+        "Azure", "Docker"
       ],
       achievements: [
         {
@@ -204,7 +221,12 @@ export const recentRoles: ExperienceRole[] = [
       period: {
         start: "Oct 2012",
         end: "Aug 2013"
-      }
+      },
+      technologies: [
+        "C#", ".NET",
+        "ASP.NET",
+        "SQL Server"
+      ]
     },
     {
       id: 'gocompare-2012',
@@ -224,7 +246,12 @@ export const recentRoles: ExperienceRole[] = [
       period: {
         start: "May 2011",
         end: "Feb 2012"
-      }
+      },
+      technologies: [
+        "C#", ".NET",
+        "ASP.NET",
+        "SQL Server"
+      ]
     },
     {
       id: 'fujitsu-2010',
