@@ -4,11 +4,19 @@ import PrintDialog from "./PrintDialog";
 export default function PrintButton() {
   const [showPrintDialog, setShowPrintDialog] = useState(false);
 
-  const handlePrint = (selectedVersion: 'styled' | 'plain') => {
+  const handlePrint = async (selectedVersion: 'styled' | 'plain') => {
     // Remove any existing print version classes
     document.body.classList.remove('print-version-styled', 'print-version-plain');
     // Add the selected version class
     document.body.classList.add(`print-version-${selectedVersion}`);
+
+     // Wait for next frame to ensure styles are applied
+     await new Promise(requestAnimationFrame);
+
+     // For mobile browsers, add a small delay
+     if (/Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+       await new Promise(resolve => setTimeout(resolve, 300));
+     }
 
     // Trigger print
     window.print();
