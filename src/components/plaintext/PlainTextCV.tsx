@@ -7,7 +7,7 @@ export default function PlainTextCV() {
     return (
         <div className="w-full max-w-4xl mx-auto bg-white p-8 space-y-8 theme-plain">
             {/* Header */}
-            <div className="space-y-4">
+            <div className="space-y-4 text-left">
                 <Profile />
             </div>
 

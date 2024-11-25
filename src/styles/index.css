@@ -112,13 +112,27 @@ code {
   body.print-version-plain .print-version-plain\:block {
     display: block !important;
   }
+
   body.print-version-plain .print-version-plain\:hidden {
     display: none !important;
   }
+
   body.print-version-styled .print-version-styled\:block {
     display: block !important;
   }
+
   body.print-version-styled .print-version-styled\:hidden {
     display: none !important;
+  }
+
+  /* Mobile Print Styles */
+  @media screen and (max-width: 768px) {
+    body.print-version-plain {
+      background-color: white;
+    }
+
+    body.print-version-plain .print-version-plain\:block {
+      padding: 1rem;
+    }
   }
 }

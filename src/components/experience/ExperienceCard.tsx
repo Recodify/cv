@@ -20,16 +20,16 @@ export function ExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
     return (
         <div className={containerClasses}>
             <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2">
+                <div className="flex flex-col md:flex-row md:items-center gap-1">
+                    <div className="flex-1">
                         <a href={`https://${role.website}`} target="_blank" rel="noopener noreferrer"
-                         className="flex items-center gap-2 hover:text-yellow-500">
+                         className="inline-flex items-center gap-2 hover:text-yellow-500">
                             <h3 className="font-semibold text-lg">{role.title}</h3>
                             <span>|</span>
                             <span className="text-lg text-yellow-600 hover:text-yellow-500">{role.company}</span>
                         </a>
                     </div>
-                    <div className="text-primary mr-2">{role.period.start} - {role.period.end}</div>
+                    <div className="text-slate-600 text-sm md:text-base font-medium">{role.period.start} - {role.period.end}</div>
                 </div>
             </div>
 
