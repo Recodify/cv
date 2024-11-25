@@ -46,7 +46,7 @@ export default function PlainTextCV() {
                             {role.achievements && (
                                 <ul className="list-disc ml-4 space-y-1">
                                     {role.achievements.filter(a => !a.hidden).map(achievement => (
-                                        <li key={achievement.id}>{achievement.text.replace(/\{\{|\}\}/g, '')}</li>
+                                        <li key={`${role.id}-${achievement.id}`}>{achievement.text.replace(/\{\{|\}\}/g, '')}</li>
                                     ))}
                                 </ul>
                             )}
@@ -62,7 +62,7 @@ export default function PlainTextCV() {
                     {group.subGroups ? (
                         <div className="space-y-2">
                             {group.subGroups.map(subGroup => (
-                                <div key={subGroup.title} className="space-y-2">
+                                <div key={`${group.category}-${subGroup.title}`} className="space-y-2">
                                     <h3 className="font-semibold">{toTitleCase(subGroup.title)}</h3>
                                     <p>{subGroup.skills.map(skill => skill.name).join(', ')}</p>
                                 </div>
@@ -79,7 +79,7 @@ export default function PlainTextCV() {
                 <h2 className="text-xl font-bold py-4 underline">Previous Experience</h2>
                 <div className="space-y-2">
                     {previousRoles.map(role => (
-                        <div key={role.id}>
+                        <div key={`previous-${role.id}`}>
                             <h3 className="font-semibold">{role.title} | {role.company}</h3>
                             <p className="text-sm">{role.period.start} - {role.period.end}</p>
                         </div>
