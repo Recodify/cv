@@ -3,14 +3,15 @@ import BrowserIcon from "../browsericon/BrowserIcon";
 import PrintInstructions from "./PrintInstuctions";
 import PrintVersionSelect from "./PrintVersionSelect";
 
-export default function PrintDialog({ show, setShow, onPrint }: Readonly<{ show: boolean, setShow: (show: boolean) => void, onPrint: (selectedVersion: 'styled' | 'plain') => void }>) {
+export default function PrintDialog({ show, setShow, onPrint }: Readonly<{ show: boolean, setShow: (show: boolean) => void, onPrint
+    : (selectedVersion: 'styled' | 'plain' | 'styled-no-recommendations') => void }>) {
 
     const [browserType, setBrowserType] = useState<'chrome' | 'firefox' | 'safari' | 'edge'>('edge');
-    const [selectedVersion, setSelectedVersion] = useState<'styled' | 'plain'>('styled');
+    const [selectedVersion, setSelectedVersion] = useState<'styled' | 'plain' | 'styled-no-recommendations'>('styled');
     const [showVersionSelect, setShowVersionSelect] = useState(true);
     const [buttonStyles, setButtonStyles] = useState('bg-slate-800 text-accent hover:bg-slate-700');
 
-    const onVersionSelect = (version: 'styled' | 'plain') => {
+    const onVersionSelect = (version: 'styled' | 'plain' | 'styled-no-recommendations') => {
         setSelectedVersion(version);
         setShowVersionSelect(false);
         if (version === 'styled') {

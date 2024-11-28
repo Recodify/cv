@@ -16,9 +16,16 @@ export default function PrintButton() {
     };
   }, []);
 
-  const handlePrint = async (selectedVersion: 'styled' | 'plain') => {
-    document.body.classList.remove('print-version-styled', 'print-version-plain');
-    document.body.classList.add(`print-version-${selectedVersion}`);
+  const handlePrint = async (selectedVersion: 'styled' | 'plain' | 'styled-no-recommendations') => {
+    document.body.classList.remove('print-version-styled', 'print-version-plain', 'print-version-styled-no-recs');
+
+    if (selectedVersion === 'styled-no-recommendations') {
+      document.body.classList.add('print-version-styled-no-recommendations');
+      document.body.classList.add('print-version-styled');
+      console.log(document.body.classList);
+    } else {
+      document.body.classList.add(`print-version-${selectedVersion}`);
+    }
 
     if (/Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
       await new Promise(resolve => setTimeout(resolve, 500));
@@ -103,7 +110,7 @@ export default function PrintButton() {
                 "
               >
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <path d="M7 10l5 5 5-5" className="animate-bounce"/>
+                <path d="M7 10l5 5 5-5" className="animate-bounce" />
               </svg>
               <span className="whitespace-nowrap">Download me!</span>
             </div>
@@ -130,7 +137,7 @@ export default function PrintButton() {
                 "
               >
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <path d="M7 10l5 5 5-5" className="animate-bounce"/>
+                <path d="M7 10l5 5 5-5" className="animate-bounce" />
               </svg>
             </div>
           </div>

@@ -29,7 +29,7 @@ const imageMap : ImageMap = {
 export default function LinkedInRecommendations() {
     return (
 
-        <div className="max-w-2xl bg-white print-version-styled:hidden">
+        <div className="recommandations print:break-inside-avoid print:break-margin max-w-2xl bg-white print-version-styled-no-recommendations:hidden">
             <Heading title="RECOMMENDATIONS"></Heading>
             <div className="divide-y divide-gray-200">
                 {recommendations.map((rec) => (

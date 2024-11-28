@@ -117,6 +117,11 @@ code {
     display: none !important;
   }
 
+  body.print-version-styled.print-version-styled-no-recommendations .print-version-styled-no-recommendations\:hidden {
+    display: none !important;
+  }
+
+
   body.print-version-styled .print-version-styled\:block {
     display: block !important;
   }
@@ -156,6 +161,11 @@ code {
     position: relative !important; /* Create new stacking context */
   }
 
+  body.print-version-styled .recommandations.print\:break-margin {
+    padding-top: 1mm !important;
+    display: block !important; /* Ensure block formatting context */
+    position: relative !important; /* Create new stacking context */
+  }
 
   body.print-version-styled .previous-experience.print\:break-margin {
     padding-top: 1mm !important;

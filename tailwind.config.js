@@ -32,5 +32,10 @@ module.exports = {
         display: 'block',
       },
     },
+    '.print-version-styled-no-recommendations': {
+      '@media print': {
+        display: 'block',
+      },
+    },
   },
 }
