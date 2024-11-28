@@ -2,7 +2,7 @@ import type { ExperienceRole } from '@/types/experience';
 
 export function PreviousExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
     return (
-        <div className="space-y-4 print:break-inside-avoid">
+        <div className="space-y-4 print:break-inside-avoid ml-2">
             <div className="flex flex-col md:flex-row print:flex-row md:items-center print:items-center gap-1">
                 <div className="flex-1">
                     {role.website ? (

@@ -161,7 +161,7 @@ code {
     position: relative !important; /* Create new stacking context */
   }
 
-  body.print-version-styled .recommandations.print\:break-margin {
+  body.print-version-styled .recommandations.print\:break-margin:not(.print-version-styled-no-recommendations\:hidden) {
     padding-top: 1mm !important;
     display: block !important; /* Ensure block formatting context */
     position: relative !important; /* Create new stacking context */

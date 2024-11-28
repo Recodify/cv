@@ -29,11 +29,11 @@ const imageMap : ImageMap = {
 export default function LinkedInRecommendations() {
     return (
 
-        <div className="recommandations print:break-inside-avoid print:break-margin max-w-2xl bg-white print-version-styled-no-recommendations:hidden">
+        <div className="recommandations print:break-margin max-w-2xl bg-white print-version-styled-no-recommendations:hidden">
             <Heading title="RECOMMENDATIONS"></Heading>
             <div className="divide-y divide-gray-200">
                 {recommendations.map((rec) => (
-                    <div key={rec.id} className="p-4 hover:bg-gray-50 print:break-inside-avoid">
+                    <div key={rec.id} className="p-2 hover:bg-gray-50 print:break-inside-avoid">
                         <div className="flex justify-between items-start">
                             <div className="flex gap-3">
                                 <div className="w-12 h-12 rounded-full overflow-hidden">
