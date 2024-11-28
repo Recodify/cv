@@ -5,6 +5,7 @@ import PrintButton from './components/printbutton/PrintButton';
 import Profile from './components/profile/Profile';
 import Skills from './components/skill/Skills';
 import PlainTextCV from './components/plaintext/PlainTextCV';
+import LinkedInRecommendations from './components/recommendations/Recommendations';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
                 <AboutMe />
                 <Experience />
                 <PreviousExperience />
+                <LinkedInRecommendations />
               </div>
             </main>
           </div>
