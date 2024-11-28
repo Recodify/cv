@@ -114,7 +114,6 @@ export const skills: SkillGroup[] = [
       { name: 'Scale-ups', icon: <Rocket /> },
       { name: 'Investment', icon: <FiDollarSign size={24} /> },
       { name: 'Due Diligence', icon: <ClipboardList /> },
-
       { name: 'Compliance', icon: <Shield /> },
       { name: 'Lean', icon: <SiMlflow size={24} /> },
       { name: 'Pre-sales', icon: <IoPricetagOutline size={24} /> },
