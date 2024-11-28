@@ -13,7 +13,6 @@ function formatAchievementText(text: string) {
 
 export default function ExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
     const containerClasses = [
-        'print:break-inside-avoid',
         role.printBreak?.styled && 'print:break-margin',
         role.bumpdown && `print:mt-${role.bumpdown}`
     ].filter(Boolean).join(' ');

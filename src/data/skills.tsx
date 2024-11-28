@@ -114,12 +114,12 @@ export const skills: SkillGroup[] = [
       { name: 'Scale-ups', icon: <Rocket /> },
       { name: 'Investment', icon: <FiDollarSign size={24} /> },
       { name: 'Due Diligence', icon: <ClipboardList /> },
-      { name: 'Company Exits', icon: <RxExit /> },
+
       { name: 'Compliance', icon: <Shield /> },
-      { name: 'Roadmaps', icon: <Map /> },
       { name: 'Lean', icon: <SiMlflow size={24} /> },
       { name: 'Pre-sales', icon: <IoPricetagOutline size={24} /> },
       { name: 'Sales', icon: <IoPricetagsOutline size={24} /> },
+      { name: 'Company Exits', icon: <RxExit /> },
       { name: 'Cost Optimisation', icon: <TbCloudDollar size={24} /> },
 
     ]
@@ -142,7 +142,6 @@ export const skills: SkillGroup[] = [
   {
     category: 'team',
     title: 'Team',
-    forcePageBreak: true,
     skills: [
       { name: 'Building Teams', icon: <UserRoundPlus /> },
       { name: 'Agile / Scrum', icon: <Users /> },
