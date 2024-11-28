@@ -68,7 +68,7 @@ export const skills: SkillGroup[] = [
         title: 'Database',
         skills: [
           { name: 'MySQL', icon: <Database /> },
-          { name: 'MS SQL Server', icon: <Database /> },
+          { name: 'SQL Server', icon: <Database /> },
           { name: 'PostgreSQL', icon: <Database /> },
           { name: 'Clickhouse', icon: <Database /> },
           { name: 'Elasticsearch', icon: <Database /> },
@@ -118,8 +118,8 @@ export const skills: SkillGroup[] = [
       { name: 'Lean', icon: <SiMlflow size={24} /> },
       { name: 'Pre-sales', icon: <IoPricetagOutline size={24} /> },
       { name: 'Sales', icon: <IoPricetagsOutline size={24} /> },
-      { name: 'Company Exits', icon: <RxExit /> },
-      { name: 'Cost Optimisation', icon: <TbCloudDollar size={24} /> },
+      { name: 'Acquisitions', icon: <RxExit /> },
+      { name: 'Cost Control', icon: <TbCloudDollar size={24} /> },
 
     ]
   },
@@ -133,7 +133,7 @@ export const skills: SkillGroup[] = [
       { name: 'Marketing', icon: <Target /> },
       { name: 'Loyalty', icon: <Heart /> },
       { name: 'SaaS', icon: <Cloud /> },
-      { name: 'Local Government', icon: <Building /> },
+      { name: 'Public Sector', icon: <Building /> },
       { name: 'Insurance', icon: <Shield /> },
 
     ]
