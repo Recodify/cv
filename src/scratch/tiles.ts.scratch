@@ -1,0 +1,30 @@
+const tiles = [
+
+    {
+      title: "Projects",
+      subtitle: "Portfolio",
+      description: "Explore my work",
+      action: "View Projects",
+      onClick: () => window.open('https://github.com/yourusername', '_blank'),
+      bgColor: "from-purple-900 to-slate-900",
+      bgImage: "/images/projects-bg.jpg"
+    },
+    {
+      title: "Blog",
+      subtitle: "Tech Insights",
+      description: "Read my thoughts",
+      action: "Read More",
+      onClick: () => window.open('https://yourblog.com', '_blank'),
+      bgColor: "from-pink-900 to-slate-900",
+      bgImage: "/images/blog-bg.jpg"
+    },
+    {
+      title: "Contact",
+      subtitle: "Get in Touch",
+      description: "Let's connect",
+      action: "Contact Me",
+      onClick: () => window.open('mailto:your@email.com'),
+      bgColor: "from-green-900 to-slate-900",
+      bgImage: "/images/contact-bg.jpg"
+    }
+  ]
