@@ -7,7 +7,7 @@ export default function PrintButton() {
   const [showInitialMessage, setShowInitialMessage] = useState(true);
 
   useEffect(() => {
-    const visibilityTimer = setTimeout(() => setIsVisible(true), 1500);
+    const visibilityTimer = setTimeout(() => setIsVisible(true), 300);
     const messageTimer = setTimeout(() => setShowInitialMessage(false), 5000);
 
     return () => {
