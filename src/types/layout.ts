@@ -1,3 +1,4 @@
 export interface BackNavigationProps {
-    onBack?: () => void
+    parentUrl?: string;
+    invertColor?: boolean;
 }

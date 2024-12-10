@@ -6,6 +6,7 @@ import Hobby from './pages/hobby'
 import TileLayout from './components/layout/TileLayout'
 import Header from './components/layout/Header'
 import { Tile } from './types/tiles'
+import Clarity from './pages/projects/clarity'
 
 function Home() {
   const navigate = useNavigate()
@@ -66,6 +67,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/cv" element={<CurriculumVitae />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/clarity" element={<Clarity parentUrl="/projects" />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/hobby" element={<Hobby />} />
       </Routes>
