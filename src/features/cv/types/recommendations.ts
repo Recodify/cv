@@ -6,11 +6,12 @@ export interface Recommendation {
     relationship: string;
     content: string;
     image: ImageKey;
+    printPageTop?: boolean;
 }
 
 type ImageKey = 'chris' | 'harvey' | 'amanda' | 'hayley' | 'martin' | 'richard' | 'sabrina' | 'steve' | 'peter';
 
 export type ImageMap = {
     [K in ImageKey]: string;
-  };
+};
 

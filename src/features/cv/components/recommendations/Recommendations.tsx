@@ -1,4 +1,4 @@
-import { recommendations } from '../../data/reecommendations';
+import { recommendations } from '../../data/recommendations';
 import { chrisImg, harveyImg, amandaImg, peterImg, hayleyImg, martinImg, richardImg, sabrinaImg, steveImg } from '@/features/cv/assets/assets';
 import { ImageMap } from '@/features/cv/types/recommendations';
 import Heading from '../heading/Heading';
@@ -16,13 +16,14 @@ const imageMap: ImageMap = {
 };
 
 export default function LinkedInRecommendations() {
+    const classNames = "p-2 hover:bg-gray-50 print:break-inside-avoid";
     return (
 
         <div className="recommandations print:break-margin max-w-2xl bg-white print-version-styled-no-recommendations:hidden">
             <Heading title="RECOMMENDATIONS"></Heading>
             <div className="divide-y divide-gray-200">
                 {recommendations.map((rec) => (
-                    <div key={rec.id} className="p-2 hover:bg-gray-50 print:break-inside-avoid">
+                    <div key={rec.id} className={rec.printPageTop ? classNames + " print:break-margin" : classNames}>
                         <div className="flex justify-between items-start">
                             <div className="flex gap-3">
                                 <div className="w-12 h-12 rounded-full overflow-hidden">

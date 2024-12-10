@@ -17,7 +17,8 @@ export const recommendations: Recommendation[] = [
     date: "August 21, 2017",
     relationship: "Harvey managed Sam directly",
     content: "Sam is a leader, thinker, innovator and deliverer of high quality, robust, contemporary technology solutions. Sam is passionate, intelligent and determined to really understand the business problem in order to plan and build the optimal technology that delivers results above and beyond expectations.",
-    image: "harvey"
+    image: "harvey",
+    printPageTop: true
   },
   {
     id: 3,
@@ -62,7 +63,8 @@ export const recommendations: Recommendation[] = [
     date: "December 8, 2011",
     relationship: "Martin was senior to Sam but didn't manage Sam directly",
     content: "Sam is a highly skilled developer, with the ability to understand and solve issues quickly and efficiently. He quickly blended in with the team and with clients, being highly thought of by both. His technical competencies are highly developed and matched with his ability to interpret client requirements quickly in order to deliver quality results that match a clients needs. I would have no hesitation in recommending Sam and he was a great loss to our team when he returned to the UK.",
-    image: "martin"
+    image: "martin",
+    printPageTop: true
   },
   {
     id: 9,

@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Base theme variables */
 :root {
   --primary: #475569; /* slate-600 */
@@ -13,7 +12,6 @@
   --highlight: #ffffff; /* white */
   --title-decoration: underline;
 }
-
 
 body {
   margin: 0;
@@ -26,7 +24,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 /* Screen-specific styles */
@@ -72,18 +71,34 @@ code {
   }
 
   /* Print Spacing */
-  .print\:mt-5 { margin-top: 1.25rem !important; }
-  .print\:mt-10 { margin-top: 4rem !important; }
+  .print\:mt-5 {
+    margin-top: 1.25rem !important;
+  }
+  .print\:mt-10 {
+    margin-top: 4rem !important;
+  }
 
-  .print\:pl-0 { padding-left: 1rem !important; }
-  .print\:pl-5 { padding-left: 1.25rem !important; }
-  .print\:pl-6 { padding-left: 1.5rem !important; }
+  .print\:pl-0 {
+    padding-left: 1rem !important;
+  }
+  .print\:pl-5 {
+    padding-left: 1.25rem !important;
+  }
+  .print\:pl-6 {
+    padding-left: 1.5rem !important;
+  }
 
-  .print\:gap-1 { gap: 0.25rem !important; }
-  .print\:space-y-5 { margin-top: 1.25rem !important; }
+  .print\:gap-1 {
+    gap: 0.25rem !important;
+  }
+  .print\:space-y-5 {
+    margin-top: 1.25rem !important;
+  }
 
   /* Print Layout Control */
-  .print\:flex-row { flex-direction: row !important; }
+  .print\:flex-row {
+    flex-direction: row !important;
+  }
   .print\:break-before-auto {
     break-before: auto;
     page-break-before: auto;
@@ -129,10 +144,10 @@ code {
     display: none !important;
   }
 
-  body.print-version-styled.print-version-styled-no-recommendations .print-version-styled-no-recommendations\:hidden {
+  body.print-version-styled.print-version-styled-no-recommendations
+    .print-version-styled-no-recommendations\:hidden {
     display: none !important;
   }
-
 
   body.print-version-styled .print-version-styled\:block {
     display: block !important;
@@ -173,8 +188,10 @@ code {
     position: relative !important; /* Create new stacking context */
   }
 
-  body.print-version-styled .recommandations.print\:break-margin:not(.print-version-styled-no-recommendations\:hidden) {
-    padding-top: 1mm !important;
+  body.print-version-styled
+    .recommandations
+    .print\:break-margin:not(.print-version-styled-no-recommendations\:hidden) {
+    padding-top: 10mm !important;
     display: block !important; /* Ensure block formatting context */
     position: relative !important; /* Create new stacking context */
   }
@@ -220,7 +237,6 @@ code {
 html {
   scroll-behavior: smooth;
 }
-
 
 /* Base styles */
 .connection-list {
