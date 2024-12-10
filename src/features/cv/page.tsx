@@ -1,3 +1,4 @@
+import './styles/cv.css'
 import BackNavigation from '../../components/layout/BackNavigation'
 import AboutMe from './components/aboutme/AboutMe'
 import Experience from './components/experience/Experience'

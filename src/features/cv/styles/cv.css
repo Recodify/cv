@@ -1,0 +1,318 @@
+/* Base Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Base theme variables */
+:root {
+  --primary: #475569; /* slate-600 */
+  --secondary: #e5e7eb; /* grey-300 */
+  --tertiary: #9ca3af; /* slate-500 */
+  --accent: #facc15; /* yellow-400 */
+  --highlight: #ffffff; /* white */
+  --title-decoration: underline;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Screen-specific styles */
+@media screen {
+  .w-96 {
+    width: 24rem;
+  }
+}
+
+/* Print Styles */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  #root {
+    height: 100%;
+  }
+
+  /* Print Layout Classes */
+  .print\:fixed {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .print\:force-background {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    forced-color-adjust: none !important;
+  }
+
+  /* Print Spacing */
+  .print\:mt-5 { margin-top: 1.25rem !important; }
+  .print\:mt-10 { margin-top: 4rem !important; }
+
+  .print\:pl-0 { padding-left: 1rem !important; }
+  .print\:pl-5 { padding-left: 1.25rem !important; }
+  .print\:pl-6 { padding-left: 1.5rem !important; }
+
+  .print\:gap-1 { gap: 0.25rem !important; }
+  .print\:space-y-5 { margin-top: 1.25rem !important; }
+
+  /* Print Layout Control */
+  .print\:flex-row { flex-direction: row !important; }
+  .print\:break-before-auto {
+    break-before: auto;
+    page-break-before: auto;
+  }
+  .print\:break-after-auto {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .print\:breakbefore {
+    break-before: page !important;
+    page-break-before: page !important;
+  }
+
+  .print\:nobreak {
+    margin-top: 10rem !important;
+  }
+
+  /* Print Color Adjustments */
+  .bg-slate-900 {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    forced-color-adjust: none;
+  }
+
+  .text-gray-300 {
+    color: rgb(229, 231, 235) !important;
+  }
+
+  .text-yellow-400,
+  .bg-yellow-400 {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    forced-color-adjust: none;
+  }
+
+  /* Print Version Controls */
+  body.print-version-plain .print-version-plain\:block {
+    display: block !important;
+  }
+
+  body.print-version-plain .print-version-plain\:hidden {
+    display: none !important;
+  }
+
+  body.print-version-styled.print-version-styled-no-recommendations .print-version-styled-no-recommendations\:hidden {
+    display: none !important;
+  }
+
+
+  body.print-version-styled .print-version-styled\:block {
+    display: block !important;
+  }
+
+  body.print-version-styled .print-version-styled\:hidden {
+    display: none !important;
+  }
+
+  /* Mobile Print Styles */
+  @media screen and (max-width: 768px) {
+    body.print-version-plain {
+      background-color: white;
+    }
+
+    body.print-version-plain .print-version-plain\:block {
+      padding: 1rem;
+    }
+  }
+
+  /* Basic break control */
+  .print\:break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    display: block !important;
+  }
+
+  /* Updated margin for page breaks with more specific selector and print units */
+  body.print-version-plain article.print\:break-margin {
+    padding-top: 1rem !important;
+    display: block !important; /* Ensure block formatting context */
+    position: relative !important; /* Create new stacking context */
+  }
+
+  body.print-version-styled article.print\:break-margin {
+    padding-top: 1rem !important;
+    display: block !important; /* Ensure block formatting context */
+    position: relative !important; /* Create new stacking context */
+  }
+
+  body.print-version-styled .recommandations.print\:break-margin:not(.print-version-styled-no-recommendations\:hidden) {
+    padding-top: 1mm !important;
+    display: block !important; /* Ensure block formatting context */
+    position: relative !important; /* Create new stacking context */
+  }
+
+  body.print-version-styled .previous-experience.print\:break-margin {
+    padding-top: 1mm !important;
+    display: block !important; /* Ensure block formatting context */
+    position: relative !important; /* Create new stacking context */
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+}
+
+/* Add this to your existing CSS */
+.theme-plain .theme-plain\:inline {
+  display: inline;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* Add this to your existing CSS */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Base styles */
+.connection-list {
+  @apply space-y-3;
+}
+
+.me {
+  @apply text-4xl font-bold text-highlight;
+}
+
+/* Print styles */
+@media print {
+  /* Add color control for the default theme */
+  :root {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    forced-color-adjust: none;
+  }
+
+  .theme-plain {
+    --primary: #000000;
+    --secondary: #000000;
+    --accent: #000000;
+    --title-decoration: none;
+    --highlight: #000000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    forced-color-adjust: none;
+  }
+
+  .theme-plain .me {
+    @apply text-3xl font-bold text-highlight;
+  }
+
+  .theme-plain .icon {
+    display: none;
+  }
+
+  .theme-plain .connection-type {
+    display: block;
+  }
+
+  .theme-plain .profile-section {
+    padding: 0;
+    margin: 0;
+    text-align: left !important;
+  }
+
+  .theme-plain .profile-section > div {
+    text-align: left !important;
+  }
+
+  .theme-plain .connection-list {
+    @apply gap-1;
+  }
+
+  .theme-plain .aboutme-section {
+    padding: 0;
+    margin: 0;
+  }
+
+  .theme-plain .section-header {
+    text-decoration: var(--title-decoration);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-plain [class*="text-"],
+  .theme-plain [class*="bg-"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    forced-color-adjust: none !important;
+  }
+
+  .theme-plain .connection-list,
+  .theme-plain .connection-list > div {
+    text-align: left !important;
+    justify-content: start !important;
+  }
+
+  .theme-plain .connection-list > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 1rem !important;
+    row-gap: 0.25rem !important;
+  }
+
+  .theme-plain .connection-list a,
+  .theme-plain .connection-list div {
+    text-align: left !important;
+    justify-content: start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
