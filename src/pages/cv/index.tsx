@@ -1,4 +1,4 @@
-import Header from '../../components/layout/Header'
+import BackNavigation from '../../components/layout/BackNavigation'
 import AboutMe from '../../components/aboutme/AboutMe'
 import Experience from '../../components/experience/Experience'
 import PreviousExperience from '../../components/experience/PreviousExperience'
@@ -15,7 +15,7 @@ interface CVProps {
 export default function CurriculumVitae({ onBack }: CVProps) {
   return (
     <div className="min-h-screen bg-slate-100 flex justify-center print:p-0 print:bg-white print:min-h-0 relative">
-      <Header title="CV" tagline="Curriculum Vitae" showTagline={false} showBackNav={true} onBack={onBack} />
+      <BackNavigation onBack={onBack} invertColor={true} />
       <PrintButton />
 
       {/* Styled Version */}

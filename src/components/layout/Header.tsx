@@ -1,5 +1,4 @@
-import { IoArrowBack } from "react-icons/io5"
-
+import BackNavigation from './BackNavigation'
 interface HeaderProps {
   title: string
   tagline?: string
@@ -16,19 +15,17 @@ export default function Header({ title, tagline, showTagline = true, showBackNav
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-32">
             <div className="flex items-center gap-6">
-              <div className="text-white">
+
+              {showBackNav && (
+                <BackNavigation onBack={onBack} invertColor={false} />
+              )}
+              {/* <div className="text-white">
                 <img
                   src="/images/rocket.png"
                   alt="Logo"
                   className={showBackNav ? "w-12 h-12" : "w-20 h-20"}
                 />
-              </div>
-              {showBackNav && (
-                <button onClick={onBack} className="flex items-center text-slate-300 hover:text-white">
-                  <IoArrowBack className="mr-2" />
-                  Back to Home
-                </button>
-              )}
+              </div> */}
             </div>
 
             <div className="flex gap-8 text-sm">
