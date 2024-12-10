@@ -7,12 +7,10 @@ import Profile from '../../components/profile/Profile'
 import Skills from '../../components/skill/Skills'
 import PlainTextCV from '../../components/plaintext/PlainTextCV'
 import LinkedInRecommendations from '../../components/recommendations/Recommendations'
+import { BackNavigationProps } from '../../types/layout'
 
-interface CVProps {
-  onBack: () => void
-}
 
-export default function CurriculumVitae({ onBack }: CVProps) {
+export default function CurriculumVitae({ onBack }: BackNavigationProps) {
   return (
     <div className="min-h-screen bg-slate-100 flex justify-center print:p-0 print:bg-white print:min-h-0 relative">
       <BackNavigation onBack={onBack} invertColor={true} />

@@ -3,14 +3,11 @@ import Header from '../../components/layout/Header'
 import Clarity from './clarity'
 import { Tile } from '../../types/tiles'
 import TileLayout from '../../components/layout/TileLayout'
-
-interface ProjectsProps {
-    onBack: () => void
-}
+import { BackNavigationProps } from '../../types/layout'
 
 type ProjectView = 'main' | 'clarity'
 
-export default function Projects({ onBack }: ProjectsProps) {
+export default function Projects({ onBack }: BackNavigationProps) {
     const [currentView, setCurrentView] = useState<ProjectView>('main')
 
     const tiles: Tile[] = [

@@ -1,9 +1,12 @@
 import { IoArrowBack } from "react-icons/io5"
-import { BackNavigationProps } from "../../types/layout"
+import { useNavigate } from 'react-router-dom'
+import { BackNavigationProps } from '../../types/layout'
 
-export default function BackNavigation({ onBack, invertColor }: BackNavigationProps & { invertColor?: boolean }) {
+export default function BackNavigation({ invertColor }: BackNavigationProps & { invertColor?: boolean }) {
+    const navigate = useNavigate()
+
     return (
-        <button onClick={onBack} className={`
+        <button onClick={() => navigate('/')} className={`
             fixed top-4 left-4 flex items-center
             ${invertColor ? 'text-slate-600 hover:text-slate-900' : 'text-slate-300 hover:text-white'}
             print:hidden w-16 flex-col gap-1

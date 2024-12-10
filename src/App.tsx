@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import CurriculumVitae from './pages/cv'
 import Projects from './pages/projects'
 import Blog from './pages/blog'
@@ -7,10 +7,8 @@ import TileLayout from './components/layout/TileLayout'
 import Header from './components/layout/Header'
 import { Tile } from './types/tiles'
 
-type View = 'home' | 'cv' | 'projects' | 'blog' | 'hobby'
-
-function App() {
-  const [currentView, setCurrentView] = useState<View>('home')
+function Home() {
+  const navigate = useNavigate()
 
   const tiles: Tile[] = [
     {
@@ -18,7 +16,7 @@ function App() {
       subtitle: "Professional Experience",
       description: "View my detailed professional background, skills, and achievements.",
       action: "View CV",
-      onClick: () => setCurrentView('cv'),
+      onClick: () => navigate('/cv'),
       bgColor: "from-blue-900 to-slate-900",
       bgImage: "/images/cv-bg.jpg"
     },
@@ -27,7 +25,7 @@ function App() {
       subtitle: "Portfolio",
       description: "Explore my work",
       action: "View Projects",
-      onClick: () => setCurrentView('projects'),
+      onClick: () => navigate('/projects'),
       bgColor: "from-purple-900 to-slate-900",
       bgImage: "/images/projects-bg.jpg"
     },
@@ -36,7 +34,7 @@ function App() {
       subtitle: "Tech Insights",
       description: "Read my thoughts",
       action: "Read More",
-      onClick: () => setCurrentView('blog'),
+      onClick: () => navigate('/blog'),
       bgColor: "from-pink-900 to-slate-900",
       bgImage: "/images/blog-bg.jpg"
     },
@@ -45,25 +43,11 @@ function App() {
       subtitle: "More than a geek",
       description: "Let's connect",
       action: "View More",
-      onClick: () => setCurrentView('hobby'),
+      onClick: () => navigate('/hobby'),
       bgColor: "from-green-900 to-slate-900",
       bgImage: "/images/contact-bg.jpg"
     }
   ]
-
-  // Handle view rendering
-  if (currentView === 'cv') {
-    return <CurriculumVitae onBack={() => setCurrentView('home')} />
-  }
-  if (currentView === 'projects') {
-    return <Projects onBack={() => setCurrentView('home')} />
-  }
-  if (currentView === 'blog') {
-    return <Blog onBack={() => setCurrentView('home')} />
-  }
-  if (currentView === 'hobby') {
-    return <Hobby onBack={() => setCurrentView('home')} />
-  }
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -72,6 +56,20 @@ function App() {
         <TileLayout tiles={tiles} />
       </div>
     </div>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cv" element={<CurriculumVitae />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/hobby" element={<Hobby />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

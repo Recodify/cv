@@ -1,24 +1,22 @@
 import BackNavigation from './BackNavigation'
-interface HeaderProps {
+import { BackNavigationProps } from '../../types/layout'
+
+interface HeaderProps extends BackNavigationProps {
   title: string
   tagline?: string
   showTagline?: boolean
   showBackNav?: boolean
-  onBack?: () => void
   children?: React.ReactNode
 }
 
-export default function Header({ title, tagline, showTagline = true, showBackNav = false, onBack, children }: HeaderProps) {
+export default function Header({ title, tagline, showTagline = true, showBackNav = false, children }: HeaderProps) {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-32">
             <div className="flex items-center gap-6">
-
-              {showBackNav && (
-                <BackNavigation onBack={onBack} invertColor={false} />
-              )}
+              {showBackNav && <BackNavigation invertColor={false} />}
               {/* <div className="text-white">
                 <img
                   src="/images/rocket.png"

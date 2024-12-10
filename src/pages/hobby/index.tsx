@@ -1,10 +1,7 @@
 import Header from '../../components/layout/Header'
+import { BackNavigationProps } from '../../types/layout'
 
-interface HobbyProps {
-  onBack: () => void
-}
-
-export default function Hobby({ onBack }: HobbyProps) {
+export default function Hobby({ onBack }: BackNavigationProps) {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <Header title="With my Hands" tagline="More than a geek" showTagline={true} showBackNav={true} onBack={onBack}>

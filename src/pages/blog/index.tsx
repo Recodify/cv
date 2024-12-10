@@ -1,10 +1,7 @@
 import Header from '../../components/layout/Header'
+import { BackNavigationProps } from '../../types/layout'
 
-interface BlogProps {
-  onBack: () => void
-}
-
-export default function Blog({ onBack }: BlogProps) {
+export default function Blog({ onBack }: BackNavigationProps) {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <Header title="Blog" tagline="Thoughts and Insights" showTagline={true} showBackNav={true} onBack={onBack}>
