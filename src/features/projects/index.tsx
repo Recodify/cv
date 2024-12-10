@@ -11,7 +11,7 @@ export default function Projects() {
         subtitle: "Better docs for better devX",
         description: "Better docs for better devX",
         action: "View",
-        onClick: () => navigate('/projects/clarity'),
+        onClick: async () => await navigate('/projects/clarity'),
         bgColor: "from-blue-900 to-slate-900",
         bgImage: "/images/cv-bg.jpg"
     }]

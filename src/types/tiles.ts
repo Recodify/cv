@@ -3,9 +3,10 @@ export interface Tile {
     subtitle: string
     description: string
     action: string
-    onClick: () => void
+    onClick: () => Promise<void>
     bgColor?: string
     bgImage?: string
+    hoverBgImage?: string
 }
 
 export interface TileLayoutProps {
