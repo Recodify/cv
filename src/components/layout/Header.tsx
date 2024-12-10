@@ -17,13 +17,15 @@ export default function Header({ title, tagline, showTagline = true, showBackNav
           <div className="flex items-center justify-between h-32">
             <div className="flex items-center gap-6">
               {showBackNav && <BackNavigation invertColor={false} />}
-              {/* <div className="text-white">
-                <img
-                  src="/images/rocket.png"
-                  alt="Logo"
-                  className={showBackNav ? "w-12 h-12" : "w-20 h-20"}
-                />
-              </div> */}
+              {!showBackNav &&
+                <div className="text-white">
+                  <img
+                    src="/images/rocket.png"
+                    alt="Logo"
+                    className="w-20 h-20"
+                  />
+                </div>
+              }
             </div>
 
             <div className="flex gap-8 text-sm">
