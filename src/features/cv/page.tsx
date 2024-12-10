@@ -1,13 +1,13 @@
 import BackNavigation from '../../components/layout/BackNavigation'
-import AboutMe from '../../components/aboutme/AboutMe'
-import Experience from '../../components/experience/Experience'
-import PreviousExperience from '../../components/experience/PreviousExperience'
-import PrintButton from '../../components/printbutton/PrintButton'
-import Profile from '../../components/profile/Profile'
-import Skills from '../../components/skill/Skills'
-import PlainTextCV from '../../components/plaintext/PlainTextCV'
-import LinkedInRecommendations from '../../components/recommendations/Recommendations'
-import { useDocumentTitle } from '../../hooks/navigation'
+import AboutMe from './components/aboutme/AboutMe'
+import Experience from './components/experience/Experience'
+import PreviousExperience from './components/experience/PreviousExperience'
+import PrintButton from './components/printbutton/PrintButton'
+import Profile from './components/profile/Profile'
+import Skills from './components/skills/Skills'
+import PlainTextCV from './components/plaintext/PlainTextCV'
+import LinkedInRecommendations from './components/recommendations/Recommendations'
+import { useDocumentTitle } from '@/hooks/navigation'
 
 export default function CurriculumVitae() {
   useDocumentTitle('CV')

@@ -1,19 +1,9 @@
 import { recommendations } from '../../data/reecommendations';
-
-import chrisImg from '../../assets/images/avatars/chris.jpeg';
-import harveyImg from '../../assets/images/avatars/harvey.jpeg';
-import amandaImg from '../../assets/images/avatars/amanda.gif';
-import peterImg from '../../assets/images/avatars/peter.jpeg';
-import hayleyImg from '../../assets/images/avatars/hayley.jpeg';
-import martinImg from '../../assets/images/avatars/martin.jpeg';
-import richardImg from '../../assets/images/avatars/richard.jpeg';
-import sabrinaImg from '../../assets/images/avatars/sabrina.jpeg';
-import steveImg from '../../assets/images/avatars/steve.jpeg';
-
-import { ImageMap } from '@/types/recommendations';
+import { chrisImg, harveyImg, amandaImg, peterImg, hayleyImg, martinImg, richardImg, sabrinaImg, steveImg } from '@/features/cv/assets/assets';
+import { ImageMap } from '@/features/cv/types/recommendations';
 import Heading from '../heading/Heading';
 
-const imageMap : ImageMap = {
+const imageMap: ImageMap = {
     chris: chrisImg,
     harvey: harveyImg,
     amanda: amandaImg,
@@ -23,8 +13,7 @@ const imageMap : ImageMap = {
     richard: richardImg,
     sabrina: sabrinaImg,
     steve: steveImg,
-  };
-
+};
 
 export default function LinkedInRecommendations() {
     return (

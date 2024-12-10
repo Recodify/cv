@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
-import CurriculumVitae from './pages/cv'
-import Projects from './pages/projects'
-import Blog from './pages/blog'
-import Hobby from './pages/hobby'
+import CurriculumVitae from './features/cv/page'
+import Projects from './features/projects'
+import Blog from './features/blog'
+import Hobby from './features/hobby'
 import TileLayout from './components/layout/TileLayout'
 import Header from './components/layout/Header'
 import { Tile } from './types/tiles'
-import Clarity from './pages/projects/clarity'
+import Clarity from './features/projects/clarity'
 
 function Home() {
   const navigate = useNavigate()

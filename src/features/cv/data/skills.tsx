@@ -1,4 +1,4 @@
-import { SkillGroup } from "@/types/skills"
+import { SkillGroup } from "@/features/cv/types/skills"
 import {
   Code2,
   Database,

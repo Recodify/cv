@@ -1,4 +1,4 @@
-import { SkillGroup } from "@/types/skills";
+import { SkillGroup } from "@/features/cv/types/skills";
 import SkillItem from "./SkillItem";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";

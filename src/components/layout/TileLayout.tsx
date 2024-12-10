@@ -1,5 +1,5 @@
 import { TileLayoutProps } from '@/types/tiles'
-import HomeTile from '../home/HomeTile'
+import HomeTile from './HomeTile'
 
 export default function TileLayout({ tiles }: Readonly<TileLayoutProps>) {
   return (

@@ -1,5 +1,5 @@
 import SkillGroupSection from "./SkillGroupSection";
-import { skills } from "../../data/skills";
+import { skills } from "@/features/cv/data/skills";
 
 export default function Skills() {
   return (

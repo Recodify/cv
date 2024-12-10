@@ -1,4 +1,4 @@
-import type { ExperienceRole } from '@/types/experience';
+import type { ExperienceRole } from '@/features/cv/types/experience';
 
 export function PreviousExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
     return (
