@@ -1,6 +1,6 @@
 import BackNavigation from './BackNavigation'
 import { BackNavigationProps } from '../../types/layout'
-
+import { useDocumentTitle } from '../../hooks/navigation'
 interface HeaderProps extends BackNavigationProps {
   title: string
   tagline?: string
@@ -10,6 +10,8 @@ interface HeaderProps extends BackNavigationProps {
 }
 
 export default function Header({ title, tagline, showTagline = true, showBackNav = false, children }: HeaderProps) {
+  useDocumentTitle(title)
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-sm">

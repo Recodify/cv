@@ -1,7 +1,9 @@
 import BackNavigation from '../../../components/layout/BackNavigation'
 import { BackNavigationProps } from '../../../types/layout'
-export default function Clarity({ parentUrl }: BackNavigationProps) {
+import { useDocumentTitle } from '../../../hooks/navigation'
 
+export default function Clarity({ parentUrl }: BackNavigationProps) {
+  useDocumentTitle('Clarity')
   return (
     <div className="min-h-screen bg-white">
       <BackNavigation parentUrl={parentUrl} invertColor={true} />
