@@ -1,4 +1,4 @@
-interface HomeTileProps {
+interface TileProps {
   title: string
   subtitle: string
   description: string
@@ -9,7 +9,7 @@ interface HomeTileProps {
   bgColor?: string
 }
 
-export default function HomeTile({
+export default function Tile({
   title,
   subtitle,
   description,
@@ -18,7 +18,7 @@ export default function HomeTile({
   bgImage,
   hoverBgImage,
   bgColor = 'from-slate-800 to-slate-900'
-}: Readonly<HomeTileProps>) {
+}: Readonly<TileProps>) {
   return (
     <button
       onClick={onClick}

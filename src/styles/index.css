@@ -36,5 +36,9 @@ html {
 }
 
 .header-transition {
-  @apply transition-all duration-500 md:transform-none transform md:transition-none ease-linear;
+  @apply transition-all duration-[900ms] md:transform-none transform md:transition-none ease-in-out;
+}
+
+.transition-absolute {
+  @apply absolute delay-[100ms];
 }
