@@ -9,3 +9,28 @@
 .bg-secondary {
     background-color: #192235;
 }
+
+/* Add smooth scrolling to the page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header animations */
+@keyframes fadeSlideOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+    80% {
+        opacity: 0.7;
+        transform: translateY(-12px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+}
