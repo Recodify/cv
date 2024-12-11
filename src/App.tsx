@@ -57,8 +57,8 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-slate-900">
-      <Header title="Recodify" tagline="Imagine, Build, Deliver" showTagline={true} showBackNav={false} />
-      <div className="container mx-auto px-4 pt-24">
+      <Header title="Recodify" tagline="Imagine, Build, Deliver" showBackNav={false} />
+      <div className="container mx-auto px-4 pt-2 md:pt-24">
         <TileLayout tiles={tiles} />
       </div>
     </div>
