@@ -37,7 +37,7 @@ html {
 
 .header-transition {
   @apply transition-all md:transform-none transform md:transition-none ease-in-out;
-  --enter-duration: 900ms;
+  --enter-duration: 1000ms;
   transition-duration: var(--enter-duration);
 }
 

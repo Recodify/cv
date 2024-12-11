@@ -22,10 +22,10 @@ const MainContent = ({ title, tagline, isScrolled }: { title: string; tagline?: 
   return (
     <header className={`text-center relative header-transition
         ${isScrolled ? 'opacity-0 -translate-y-8 md:opacity-100 md:translate-y-0' : 'opacity-100 translate-y-0'}`}>
-      <h1 className="font-bold text-white mb-3 md:mb-7 text-7xl">
+      <h1 className="font-bold text-white mb-3 md:mb-7 text-5xl md:text-7xl">
         {title}
       </h1>
-      <p className="font-mono text-lg md:text-2xl text-slate-300 max-w-2xl mx-auto">
+      <p className="font-mono text-base md:text-2xl text-slate-300 max-w-2xl mx-auto">
         {tagline}
       </p>
     </header>
@@ -93,7 +93,7 @@ export default function Header({ title, tagline, showBackNav = false, children }
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolling(window.scrollY > 20);
-      setTimeout(() => setIsScrolled(window.scrollY > 20), 200)
+      setTimeout(() => setIsScrolled(window.scrollY > 20), 10)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -104,7 +104,7 @@ export default function Header({ title, tagline, showBackNav = false, children }
     <>
       <NavContent title={title} tagline={tagline} isScrolled={isScrolled} showBackNav={showBackNav} isScrolling={isScrolling} />
 
-      <div className={`${isScrolled ? 'pt-10 pb-10 md:pt-32 md:pb-20' : 'pt-28 pb-12 md:pt-32 md:pb-20'}`}>
+      <div className={`md:pt-60 md:pb-10 ${isScrolled ? 'pt-10 pb-10' : 'pt-28 pb-12'}`}>
         <MainContent title={title} tagline={tagline} isScrolled={isScrolled} />
         {children}
       </div>
