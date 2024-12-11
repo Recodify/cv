@@ -32,7 +32,7 @@ const MainContent = ({ title, tagline, isScrolled }: { title: string; tagline?: 
   );
 };
 
-const NavContent = ({ title, tagline, isScrolled, showBackNav }: { title: string; tagline?: string; isScrolled: boolean; showBackNav: boolean }) => {
+const NavContent = ({ title, tagline, isScrolled, showBackNav, isScrolling }: { title: string; tagline?: string; isScrolled: boolean; showBackNav: boolean; isScrolling: boolean }) => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm header-transition
       ${isScrolled ? 'pt-2 md:pt-4 h-12 md:h-32 bg-slate-900/95 md:bg-slate-900/70' : 'pt-4 h-12 md:h-32 md:bg-slate-900/50'}`}>
@@ -61,9 +61,13 @@ const NavContent = ({ title, tagline, isScrolled, showBackNav }: { title: string
           </div>
 
           {/* Desktop Navigation */}
-          <div className={`header-transition pl-24 md:pl-0 md:text-lg flex ${isScrolled
-            ? 'md:gap-6 opacity-0 md:opacity-100 scale-0 md:scale-100 absolute md:relative translate-y-4 md:translate-y-0'
-            : 'gap-4 md:gap-6 text-sm opacity-100 relative scale-100 translate-y-0'}`}>
+          <div className={`header-transition pl-24 md:pl-0 md:text-lg flex
+          ${isScrolling
+              ? 'fast'
+              : ''}
+           ${isScrolled
+              ? 'md:gap-6 opacity-0 md:opacity-100 scale-0 md:scale-100 absolute md:relative translate-y-4 md:translate-y-0'
+              : 'gap-4 md:gap-6 text-sm opacity-100 relative scale-100 translate-y-0'}`}>
             {links.map(link => (
               <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
                 {link.label}
@@ -82,11 +86,13 @@ const NavContent = ({ title, tagline, isScrolled, showBackNav }: { title: string
 }
 
 export default function Header({ title, tagline, showBackNav = false, children }: Readonly<HeaderProps>) {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
   useDocumentTitle(title)
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsScrolling(window.scrollY > 20);
       setTimeout(() => setIsScrolled(window.scrollY > 20), 200)
     }
 
@@ -96,7 +102,7 @@ export default function Header({ title, tagline, showBackNav = false, children }
 
   return (
     <>
-      <NavContent title={title} tagline={tagline} isScrolled={isScrolled} showBackNav={showBackNav} />
+      <NavContent title={title} tagline={tagline} isScrolled={isScrolled} showBackNav={showBackNav} isScrolling={isScrolling} />
 
       <div className={`${isScrolled ? 'pt-10 pb-10 md:pt-32 md:pb-20' : 'pt-28 pb-12 md:pt-32 md:pb-20'}`}>
         <MainContent title={title} tagline={tagline} isScrolled={isScrolled} />

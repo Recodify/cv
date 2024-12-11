@@ -36,9 +36,12 @@ html {
 }
 
 .header-transition {
-  @apply transition-all duration-[900ms] md:transform-none transform md:transition-none ease-in-out;
+  @apply transition-all md:transform-none transform md:transition-none ease-in-out;
+  --enter-duration: 900ms;
+  transition-duration: var(--enter-duration);
 }
 
-.transition-absolute {
-  @apply absolute delay-[100ms];
+.header-transition.fast {
+  --exit-duration: 1ms;
+  transition-duration: var(--exit-duration);
 }
