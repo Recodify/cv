@@ -21,7 +21,7 @@ const links: Link[] = [
 
 const HeaderContent = ({ title, tagline, isScrolled }: { title: string; tagline?: string; isScrolled: boolean }) => {
   return (
-    <header className={`text-center relative md:transform-none transition-all duration-700
+    <header className={`text-center relative md:transform-none transform md:transition-none transition-all duration-[600ms] ease-in-out
         ${isScrolled ? 'opacity-0 -translate-y-8' : 'opacity-100 translate-y-0'}`}>
       <h1 className="font-bold text-white mb-6 text-7xl">
         {title}
@@ -39,7 +39,7 @@ export default function Header({ title, tagline, showTagline = true, showBackNav
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      setTimeout(() => setIsScrolled(window.scrollY > 20), 100)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -48,10 +48,10 @@ export default function Header({ title, tagline, showTagline = true, showBackNav
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-30000
         ${isScrolled ? 'pt-2 md:pt-4 h-12 md:h-32 bg-slate-900/95 md:bg-primary/90' : 'pt-4 h-16 md:h-32 md:bg-primary/90'}`}>
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-full transition-all duration-300">
+          <div className="flex items-center justify-between h-full transition-all duration-30000">
             <div className="flex items-center gap-6">
               {showBackNav && <BackNavigation invertColor={false} />}
               {!showBackNav && (
