@@ -1,0 +1,11 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.bg-primary {
+    background-color: rgba(25, 34, 53, 0.9);
+}
+
+.bg-secondary {
+    background-color: #192235;
+}

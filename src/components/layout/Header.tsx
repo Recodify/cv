@@ -14,7 +14,7 @@ export default function Header({ title, tagline, showTagline = true, showBackNav
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-sm">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-32">
             <div className="flex items-center gap-6">

@@ -46,7 +46,7 @@ export default function HomeTile({
       {/* Content */}
       <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent">
         <div className="transform transition-all duration-300 group-hover:translate-y-[-8px]">
-          <div className="text-sm font-medium text-slate-400 mb-2 uppercase tracking-wider">
+          <div className="text-sm font-medium text-slate-100 mb-2 uppercase tracking-wider">
             {subtitle}
           </div>
           <h3 className="text-3xl font-bold text-white mb-4 group-hover:mb-2">
