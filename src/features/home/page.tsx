@@ -8,7 +8,7 @@ export default function Home() {
 
     const tiles: Tile[] = [
         {
-            title: "Resume",
+            title: "Personal CV",
             subtitle: "Professional Experience",
             description: "View my detailed professional background, skills, and achievements.",
             action: "View CV",
