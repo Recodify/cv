@@ -16,14 +16,14 @@ const imageMap: ImageMap = {
 };
 
 export default function LinkedInRecommendations() {
-    const classNames = "p-2 hover:bg-gray-50 print:break-inside-avoid";
+    const classNames = "pl-2 hover:bg-gray-50 print:break-inside-avoid pt-6 pb-2";
     return (
 
-        <div className="recommandations print:break-margin max-w-2xl bg-white print-version-styled-no-recommendations:hidden">
+        <div id="recommendations" className="recommandations print:break-margin max-w-2xl gap-y-2 bg-white print-version-styled-no-recommendations:hidden">
             <Heading title="RECOMMENDATIONS"></Heading>
-            <div className="divide-y divide-gray-200">
+            <div className="divide-y divide-gray-200  ">
                 {recommendations.map((rec) => (
-                    <div key={rec.id} className={rec.printPageTop ? classNames + " print:break-margin" : classNames}>
+                    <div key={rec.id} className={rec.printPageTop ? classNames + " .printPageTop .print:break-margin" : classNames}>
                         <div className="flex justify-between items-start">
                             <div className="flex gap-3">
                                 <div className="w-12 h-12 rounded-full overflow-hidden">

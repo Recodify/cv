@@ -13,7 +13,7 @@ function formatAchievementText(text: string) {
 
 export default function ExperienceCard({ role }: Readonly<{ role: ExperienceRole; }>) {
     const containerClasses = [
-        role.printBreak?.styled && 'print:break-margin',
+        role.printBreak?.styled && 'print:break-margin print:break-before-auto',
         role.bumpdown && `print:mt-${role.bumpdown}`
     ].filter(Boolean).join(' ');
 
@@ -24,12 +24,12 @@ export default function ExperienceCard({ role }: Readonly<{ role: ExperienceRole
                     <div className="flex-1">
                         <a href={`https://${role.website}`} target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 hover:text-yellow-500">
-                            <h3 className="font-semibold text-lg">{role.title}</h3>
+                            <h3 className="font-medium text-base">{role.title}</h3>
                             <span>|</span>
-                            <span className="text-lg text-yellow-600 hover:text-yellow-500">{role.company}</span>
+                            <span className="text-base font-medium text-yellow-600 hover:text-yellow-500">{role.company}</span>
                         </a>
                     </div>
-                    <div className="text-slate-600  md:text-base print:text-base">{role.period.start} - {role.period.end}</div>
+                    <div className=" font-medium  md:text-sm print:text-sm">{role.period.start} - {role.period.end}</div>
                 </div>
             </div>
 
@@ -42,9 +42,9 @@ export default function ExperienceCard({ role }: Readonly<{ role: ExperienceRole
                     ))}
                 </div>
                 <p hidden={!role.introduction} className="text-primary">{role.introduction}</p>
-                <ul hidden={!role.achievements?.length} className="list-disc text-primary space-y-2 ml-10">
+                <ul hidden={!role.achievements?.length} className="list-disc text-primary ml-10 [&>li]:mb-2 print:[&>li]:mb-1">
                     {role.achievements?.filter(a => !a.hidden).map(achievement => (
-                        <li key={achievement.id}>{formatAchievementText(achievement.text)}</li>
+                        <li  key={achievement.id}>{formatAchievementText(achievement.text)}</li>
                     ))}
                 </ul>
                 <hr />

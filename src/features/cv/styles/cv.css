@@ -64,6 +64,15 @@ code {
     z-index: -1;
   }
 
+  .print\:space-y-1 {
+    margin-top: 0.25rem !important;
+  }
+
+  .print\:space-y-2 {
+    margin-top: 0.5rem !important;
+  }
+
+
   .print\:force-background {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
@@ -183,15 +192,20 @@ code {
   }
 
   body.print-version-styled article.print\:break-margin {
-    padding-top: 1rem !important;
+    padding-top: 2rem !important;
     display: block !important; /* Ensure block formatting context */
     position: relative !important; /* Create new stacking context */
   }
 
   body.print-version-styled
-    .recommandations
-    .print\:break-margin:not(.print-version-styled-no-recommendations\:hidden) {
-    padding-top: 10mm !important;
+  #recommendations {
+    padding-top: 0.1mm !important;
+
+  }
+
+  body.print-version-styled
+  #recommendations .printPageTop.print\:break-margin {
+    padding-top: 25rem !important;
     display: block !important; /* Ensure block formatting context */
     position: relative !important; /* Create new stacking context */
   }

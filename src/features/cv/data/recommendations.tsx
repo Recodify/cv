@@ -36,7 +36,8 @@ export const recommendations: Recommendation[] = [
     date: "December 13, 2012",
     relationship: "Hayley was Sam's client",
     content: "Sam worked with us at Gocompare.com for 9 months and added great value to our IT department. I was sad to see Sam move on and would strongly recommend Sam as a great addition to any business. A lively guy and a pleasure to work with.",
-    image: "hayley"
+    image: "hayley",
+    printPageTop: true
   },
   {
     id: 6,
@@ -63,16 +64,7 @@ export const recommendations: Recommendation[] = [
     date: "December 8, 2011",
     relationship: "Martin was senior to Sam but didn't manage Sam directly",
     content: "Sam is a highly skilled developer, with the ability to understand and solve issues quickly and efficiently. He quickly blended in with the team and with clients, being highly thought of by both. His technical competencies are highly developed and matched with his ability to interpret client requirements quickly in order to deliver quality results that match a clients needs. I would have no hesitation in recommending Sam and he was a great loss to our team when he returned to the UK.",
-    image: "martin",
-    printPageTop: true
+    image: "martin"
   },
-  {
-    id: 9,
-    author: "Sabrina Stewart",
-    position: "People & Culture, Change & Transformation",
-    date: "January 26, 2010",
-    relationship: "Sabrina was Sam's client",
-    content: "Sam was an absolute pleasure to work with and find a new role for, he really stood out for me on a number of levels, including excellent communication skills, advanced technical ability with a natural ambition to succeed. I would have no hesitation in recommending him for the future.",
-    image: "sabrina"
-  }
+
 ];

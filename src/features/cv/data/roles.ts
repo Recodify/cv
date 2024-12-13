@@ -293,23 +293,5 @@ export const previousRoles: ExperienceRole[] = [
       end: "Jun 2006"
     }
   },
-  {
-    id: 'tresco-2003',
-    title: "Web Developer",
-    company: "Tresco Estate",
-    website: "tresco.co.uk",
-    period: {
-      start: "Mar 2003",
-      end: "Nov 2004"
-    }
-  },
-  {
-    id: 'ford-2001',
-    title: "Sys/Network Admin",
-    company: "Ford Group",
-    period: {
-      start: "Jan 2001",
-      end: "Mar 2003"
-    }
-  }
+
 ];
