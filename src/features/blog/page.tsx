@@ -4,7 +4,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <Header title="Blog" tagline="Thoughts and Insights" showBackNav={true}>
-        <div className="container mx-auto px-4 pt-16">
+        <div className="container main-content">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-8">
               <p className="text-slate-300 text-xl">Coming Soon</p>

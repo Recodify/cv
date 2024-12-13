@@ -39,15 +39,14 @@ const NavContent = ({ title, tagline, isScrolled, showBackNav, isScrolling }: { 
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-full header-transition">
           <div className="flex items-center gap-6">
-            {showBackNav && <BackNavigation invertColor={false} />}
-            {!showBackNav && (
               <div className="flex items-center gap-3">
                 <div className="text-white min-w-fit">
-                  <img
+                  {!showBackNav && <img
                     src="/images/rocket.png"
                     alt="Logo"
                     className={`header-transition md:w-24 md:h-24 ${isScrolled ? 'w-8 h-8 ' : 'h-10 w-10'
-                      }`} />
+                      }`} />}
+                  {showBackNav && <BackNavigation invertColor={false} />}
                 </div>
                 <div className={`md:hidden header-transition ${isScrolled
                   ? 'opacity-100 translate-y-0'
@@ -57,11 +56,10 @@ const NavContent = ({ title, tagline, isScrolled, showBackNav, isScrolling }: { 
                   <span className="text-xs text-slate-300 pl-2">{tagline}</span>
                 </div>
               </div>
-            )}
           </div>
 
           {/* Desktop Navigation */}
-          <div className={`header-transition pl-24 md:pl-0 md:text-lg flex
+          <div className={`header-transition pl-28 md:pl-0 md:text-lg flex
           ${isScrolling
               ? 'fast'
               : ''}
@@ -91,9 +89,10 @@ export default function Header({ title, tagline, showBackNav = false, children }
   useDocumentTitle(title)
 
   useEffect(() => {
+    const scrollOffset = 100;
     const handleScroll = () => {
-      setIsScrolling(window.scrollY > 20);
-      setTimeout(() => setIsScrolled(window.scrollY > 20), 10)
+      setIsScrolling(window.scrollY > scrollOffset);
+      setTimeout(() => setIsScrolled(window.scrollY > scrollOffset), 10)
     }
 
     window.addEventListener('scroll', handleScroll)

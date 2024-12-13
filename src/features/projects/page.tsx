@@ -19,7 +19,7 @@ export default function Projects() {
     return (
         <div className="min-h-screen bg-slate-900 text-white">
             <Header title="Projects" tagline="Portfolio" showBackNav={true} />
-            <div className="container mx-auto px-4 pt-24">
+            <div className="container main-content">
                 <TileLayout tiles={tiles} />
             </div>
         </div>

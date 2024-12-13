@@ -53,7 +53,7 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-slate-900">
             <Header title="Recodify" tagline="Imagine|Build|Deliver" showBackNav={false} />
-            <div className="container mx-auto px-4 pt-2 md:pt-24">
+            <div className="container main-content">
                 <TileLayout tiles={tiles} />
             </div>
         </div>

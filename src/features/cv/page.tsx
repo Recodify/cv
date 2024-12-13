@@ -14,11 +14,13 @@ export default function CurriculumVitae() {
   useDocumentTitle('CV')
   return (
     <div className="min-h-screen bg-slate-100 flex justify-center print:p-0 print:bg-white print:min-h-0 relative">
-      <BackNavigation invertColor={true} />
+
+
       <PrintButton />
 
       {/* Styled Version */}
       <div className="block print-version-plain:hidden md:p-4">
+
         <div className="w-full max-w-7xl bg-white shadow-lg print:shadow-none print:w-[21cm]">
           <div className="flex flex-col md:flex-row min-h-screen print:flex-row print:min-h-0">
             <aside className="w-full md:w-76 bg-slate-900 border-b md:border-b-0 md:border-r border-slate-900 print:w-72 shrink-0 print:bg-slate-900 print:force-background relative">
