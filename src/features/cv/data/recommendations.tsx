@@ -2,6 +2,15 @@ import { Recommendation } from "../types/recommendations";
 
 export const recommendations: Recommendation[] = [
   {
+    id: 0,
+    author: "Mike Keegan",
+    position: "Head of R&D at Ei Electronics",
+    date: "January 25, 2025",
+    relationship: "Mike worked with Sam but at different companies",
+    content: "Sam thrives in high-pressure, rapidly changing environments, whether pioneering IoT systems or scaling infrastructure to handle rapidly growing demands. His considerable and varied experience, along with deep & current technical knowledge, enable him to architect, design & rapidly develop solutions. \n\nSpecialties include traditional and emerging databases, complex back-end queueing & data routing, as well as user-focussed UIs.\n\nSam has the ability to balance immediate business drivers (we need it now!) and longer-term architectural imperatives (we’ll need to grow & maintain this for the next 10 years!). Sam’s a clear communicator at all levels, from the application users through the team/projects management and up to the C-level.\n\nSam’s genuine passion for technology and innovation makes him a driving force in any organization. His enthusiasm is contagious, fostering a culture of curiosity and continuous improvement.",
+    image: "mike"
+  },
+  {
     id: 1,
     author: "Chris Jones",
     position: "CEO at HomeLINK",

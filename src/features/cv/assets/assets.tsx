@@ -9,6 +9,7 @@ import martinImg from '@/features/cv/assets/martin.jpeg';
 import richardImg from '@/features/cv/assets/richard.jpeg';
 import sabrinaImg from '@/features/cv/assets/sabrina.jpeg';
 import steveImg from '@/features/cv/assets/steve.jpeg';
+import mikeImg from '@/features/cv/assets/mike.jpeg';
 
 export {
     chrisImg,
@@ -20,4 +21,5 @@ export {
     richardImg,
     sabrinaImg,
     steveImg,
+    mikeImg,
 }

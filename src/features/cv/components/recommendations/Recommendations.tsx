@@ -1,5 +1,5 @@
 import { recommendations } from '../../data/recommendations';
-import { chrisImg, harveyImg, amandaImg, peterImg, hayleyImg, martinImg, richardImg, sabrinaImg, steveImg } from '@/features/cv/assets/assets';
+import { chrisImg, harveyImg, amandaImg, peterImg, hayleyImg, martinImg, richardImg, sabrinaImg, steveImg, mikeImg } from '@/features/cv/assets/assets';
 import { ImageMap } from '@/features/cv/types/recommendations';
 import Heading from '../heading/Heading';
 
@@ -13,6 +13,7 @@ const imageMap: ImageMap = {
     richard: richardImg,
     sabrina: sabrinaImg,
     steve: steveImg,
+    mike: mikeImg
 };
 
 export default function LinkedInRecommendations() {

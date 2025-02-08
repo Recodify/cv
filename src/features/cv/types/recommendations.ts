@@ -9,7 +9,7 @@ export interface Recommendation {
     printPageTop?: boolean;
 }
 
-type ImageKey = 'chris' | 'harvey' | 'amanda' | 'hayley' | 'martin' | 'richard' | 'sabrina' | 'steve' | 'peter';
+type ImageKey = 'chris' | 'harvey' | 'amanda' | 'hayley' | 'martin' | 'richard' | 'sabrina' | 'steve' | 'peter' | 'mike';
 
 export type ImageMap = {
     [K in ImageKey]: string;
