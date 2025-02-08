@@ -14,8 +14,8 @@ export const connection: Connection[] = [
   {
     type: 'email',
     icon: <Mail className="w-full h-full" />,
-    text: "shilessam@gmail.com",
-    href: "mailto:shilessam@gmail.com"
+    text: "sam@recodify.co.uk",
+    href: "mailto:sam@recodify.co.uk"
   },
   {
     type: 'location',
