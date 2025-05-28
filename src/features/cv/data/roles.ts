@@ -68,7 +68,7 @@ export const recentRoles: ExperienceRole[] = [
       plain: true
     },
     period: {
-      start: "Nov 2008",
+      start: "Nov 2018",
       end: "Sep 2023"
     },
     technologies: [
